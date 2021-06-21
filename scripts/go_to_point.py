@@ -152,15 +152,15 @@ global action_service
     	else:
 	    	if state_ == 0:
 	    		fix_yaw(desired_position)
-	    		feedback.status = 'Rotating to goal'
+	    		feedback.feedback = 'Rotating to goal'
 	    	elif state_ == 1:
 	    		go_straight_ahead(desired_position)
-	    		feedback.status = 'Moving towards target'
+	    		feedback.feedback = 'Moving towards target'
 	    	elif state_ == 2:
-	    		feedback.status = 'Goal X and Y'
+	    		feedback.feedback = 'Goal X and Y'
 	    		fix_final_yaw(des_yaw)
 	    	elif state_ == 3:
-	    		feedback.status = 'You reached the GOAL !!! Congratulations'
+	    		feedback.feedback = 'You reached the GOAL !!! Congratulations'
 	    	else:
                 	rospy.logerr('Unknown state!')
                 
