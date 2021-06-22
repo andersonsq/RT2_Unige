@@ -2,7 +2,7 @@
 
 
 import rospy
-from geometry_msgs.msg import Twist, Point, Pose
+from geometry_msgs.msg import Twist, Point
 from nav_msgs.msg import Odometry
 from tf import transformations
 from rt2_assignment1.srv import Position
@@ -11,14 +11,17 @@ import math
 import rt2_assignment1.msg 
 import actionlib
 import actionlib.msg
-import motion_plan.msg
-
+#import motion_plan.msg
+#
 # robot state variables
 position_ = Point()
 yaw_ = 0
 position_ = 0
 state_ = 0
 pub_ = None
+
+# action server
+act_s = None
 
 # parameters for control
 yaw_precision_ = math.pi / 9  # +/- 20 degree allowed
@@ -29,8 +32,6 @@ kp_d = 0.2
 ub_a = 0.6
 lb_a = -0.5
 ub_d = 0.6
-
-rate = rospy.Rate(40)	#Delay
 
 def clbk_odom(msg):
     global position_
@@ -126,11 +127,9 @@ def done():
     pub_.publish(twist_msg)
     
 def go_to_point(goal):		##Action goal
-
-global action_service
-	
+	global act_s
+		
     desired_position = Point()
-    
     desired_position.x = goal.x
     #desired_position.x = req.x
     desired_position.y = goal.y
@@ -138,16 +137,16 @@ global action_service
     des_yaw = goal.theta
     #des_yaw = req.theta
     
+    rate = rospy.Rate(20)
     objective = True
-    rate
-    change_state(0)    
+    change_state(0)   
     
     while not rospy.is_shutdown():
     
     	#if action_server.set_aborted():
-    	if action_server.is_preempt_requested():
+    	if act_s.is_preempt_requested():
     		rospy.loginfo('Goal was preempted')
-    		action_server.set_preempted()
+    		act_s.set_preempted()
     		objective = False
     	else:
 	    	if state_ == 0:
@@ -164,7 +163,7 @@ global action_service
 	    	else:
                 	rospy.logerr('Unknown state!')
                 
-	    	action_server.publish_feedback(feedback)
+	    	act_s.publish_feedback(feedback)
 	    	rate.sleep()
     		done()
     		break
@@ -173,17 +172,17 @@ global action_service
    if objective:
    	result.result = objective
 	rospy.loginfo('Objective complete')
-	action_server.set_succeeded(result)
+	act_s.set_succeeded(result)
 
 def main():
-    global pub_, action_server
+    global pub_, act_s
     rospy.init_node('go_to_point')
     pub_ = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
     sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
     #service = rospy.Service('/go_to_point', Position, go_to_point)
-    action_server = actionlib.SimpleActionServer('/go_to_point', rt2_assignment1.msg.Assignment1Action, go_to_point)
+    act_s = actionlib.SimpleActionServer('/go_to_point', rt2_assignment1.msg.Assignment1Action, go_to_point)
     
-    action_server.start()    
+    act_s.start()    
     
     rospy.spin()    
 

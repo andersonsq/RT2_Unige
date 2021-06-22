@@ -11,10 +11,10 @@ int options = 0;
 
 bool user_interface(rt2_assignment1::Command::Request &req, rt2_assignment1::Command::Response &res){
     if (req.command == "start"){
-    	start = true;
+    	options = true;
     }
     else {
-    	start = false;
+    	options = -1;
     }
     return true;
 }
@@ -61,12 +61,14 @@ int main(int argc, char **argv)
    			std::cout << "\nGoal was canceled" << std::endl;
    			options = 0;
    			break;
-   		case 1:
+   		case true:
    			client_rp.call(rp);
    			goal.x = rp.response.x;
    			goal.y = rp.response.y;
    			goal.theta = rp.response.theta;
-   			std::cout << "\nGoing to the position: x= " << goal.x << " y= " <<goal.y << " theta = " << goal.theta << std::endl;
+   			std::cout << "\nGoing to the position: x=%f " << goal.x << " y=%f " <<goal.y << " theta =%f \n " << goal.theta << std::endl;
+   			actionlib::SimpleClientGoalState goal_state = ac.getState();
+   			ac.sendGoal(goal);
    			options = 0;
    			break;
    		//default: 
