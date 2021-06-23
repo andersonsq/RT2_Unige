@@ -5,6 +5,7 @@
 
 #include "rt2_assignment1/Assignment1Action.h"
 #include "actionlib/client/simple_action_client.h"
+#include "actionlib/client/terminal_state.h"
 
 bool start = false;
 int options = 0;
@@ -19,6 +20,11 @@ bool user_interface(rt2_assignment1::Command::Request &req, rt2_assignment1::Com
     return true;
 }
 
+void simple_done_callback(const actionlib::SimpleClientGoalState & get_state,
+                const rt2_assignment1::Assignment1ResultConstPtr & result)
+                {    
+  		options = 2;
+  		}
 
 int main(int argc, char **argv)
 {
@@ -38,39 +44,51 @@ int main(int argc, char **argv)
    rp.request.y_min = -5.0;
    //rt2_assignment1::Position p;
    rt2_assignment1::Assignment1Goal goal;
+      
+   actionlib::SimpleClientGoalState get_state = ac.getState();
    
    while(ros::ok()){
    	ros::spinOnce();
-   	/*if (start){
-   		client_rp.call(rp);
-   		p.request.x = rp.response.x;
-   		p.request.y = rp.response.y;
-   		p.request.theta = rp.response.theta;
-   		std::cout << "\nGoing to the position: x= " << p.request.x << " y= " <<p.request.y << " theta = " <<p.request.theta << std::endl;
-   		client_p.call(p);
-   		std::cout << "Position reached" << std::endl;
-   	}*/
+
    	switch (options){
-   		case 0:
+   		/*case 0:
 			std::cout << "\nPress 1 to start the robot" << std::endl;
 			std::cout << "\nPress -1 to cancel the goal" << std::endl;
 			std::cin >> options;
-			break;
+			break;*/
    		case -1:
+   			//ac.getState();
 			ac.cancelGoal();
    			std::cout << "\nGoal was canceled" << std::endl;
    			options = 0;
    			break;
    		case true:
+   			//ac.getState();
    			client_rp.call(rp);
    			goal.x = rp.response.x;
    			goal.y = rp.response.y;
    			goal.theta = rp.response.theta;
-   			std::cout << "\nGoing to the position: x=%f " << goal.x << " y=%f " <<goal.y << " theta =%f \n " << goal.theta << std::endl;
-   			actionlib::SimpleClientGoalState goal_state = ac.getState();
-   			ac.sendGoal(goal);
+   			std::cout << "\nGoing to the position: x= " << goal.x << " y= " <<goal.y << " theta = \n " << goal.theta << std::endl;
+   			ac.sendGoal(goal, &simple_done_callback);
    			options = 0;
    			break;
+   		case 2:
+   			//ac.getState();
+   			if(get_state == actionlib::SimpleClientGoalState::SUCCEEDED)
+			{
+			std::cout << "\nOn Goal direction" << std::endl;
+			options = 1;
+			}
+			else if(get_state == actionlib::SimpleClientGoalState::PREEMPTED)
+			{
+			std::cout << "\nCanceled" << std::endl;
+			options = 0;
+			}
+			else
+			{
+			std::cout << "\nFailed" << std::endl;
+			options = 0;
+			}
    		//default: 
    			//std::cout << "\nInvalid option" << std::endl;
    	}

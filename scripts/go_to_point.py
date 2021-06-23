@@ -11,7 +11,7 @@ import math
 import rt2_assignment1.msg 
 import actionlib
 import actionlib.msg
-#import motion_plan.msg
+import motion_plan.msg
 #
 # robot state variables
 position_ = Point()
@@ -127,7 +127,8 @@ def done():
     pub_.publish(twist_msg)
     
 def go_to_point(goal):		##Action goal
-	global act_s
+
+    global act_s
 		
     desired_position = Point()
     desired_position.x = goal.x
@@ -140,6 +141,9 @@ def go_to_point(goal):		##Action goal
     rate = rospy.Rate(20)
     objective = True
     change_state(0)   
+    
+    feedback = rt2_assignment1.msg.Assignment1Feedback()
+    result = rt2_assignment1.msg.Assignment1Result()
     
     while not rospy.is_shutdown():
     
@@ -169,10 +173,10 @@ def go_to_point(goal):		##Action goal
     		break
     #return True
     
-   if objective:
-   	result.result = objective
-	rospy.loginfo('Objective complete')
-	act_s.set_succeeded(result)
+    if objective:
+    	result.result = objective
+    	rospy.loginfo('Objective complete')
+    	act_s.set_succeeded(result)
 
 def main():
     global pub_, act_s
