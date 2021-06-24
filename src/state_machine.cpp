@@ -7,25 +7,31 @@
 #include "actionlib/client/simple_action_client.h"
 #include "actionlib/client/terminal_state.h"
 
+/*global variables*/
 bool start = false;
 int options = 0;
 
-bool user_interface(rt2_assignment1::Command::Request &req, rt2_assignment1::Command::Response &res){
-    if (req.command == "start"){
+/*function to start my user_interface*/
+bool user_interface(rt2_assignment1::Command::Request &req, rt2_assignment1::Command::Response &res)
+{
+    if (req.command == "start")
+    	{
     	options = true;
-    }
-    else {
+    	}
+    else 
+    	{
     	options = -1;
-    }
+    	}
     return true;
 }
 
-void simple_done_callback(const actionlib::SimpleClientGoalState & get_state,
-                const rt2_assignment1::Assignment1ResultConstPtr & result)
-                {    
-  		options = 2;
-  		}
+/*void function to check my robot status*/
+void simple_done_callback(const actionlib::SimpleClientGoalState & get_state, const rt2_assignment1::Assignment1ResultConstPtr & result)
+{    
+  options = 2;
+}
 
+/*main function*/
 int main(int argc, char **argv)
 {
    ros::init(argc, argv, "state_machine");
@@ -33,34 +39,37 @@ int main(int argc, char **argv)
    
    ros::ServiceServer service= n.advertiseService("/user_interface", user_interface);
    ros::ServiceClient client_rp = n.serviceClient<rt2_assignment1::RandomPosition>("/position_server");
-   //ros::ServiceClient client_p = n.serviceClient<rt2_assignment1::Position>("/go_to_point");
-     actionlib::SimpleActionClient<rt2_assignment1::Assignment1Action> ac("go_to_point", true);
+   actionlib::SimpleActionClient<rt2_assignment1::Assignment1Action> ac("go_to_point", true);
+   
+      //wait for the action server to come up
+   while(!ac.waitForServer(ros::Duration(5.0)))
+  	{
+    	ROS_INFO("Waiting for the move_base action server to come up");
+    	}
+   
+   /*local variables*/
+   rt2_assignment1::Assignment1Goal goal; 
+   actionlib::SimpleClientGoalState get_state = ac.getState();
    
    //Limit where the robot can go
    rt2_assignment1::RandomPosition rp;
    rp.request.x_max = 5.0;
    rp.request.x_min = -5.0;
    rp.request.y_max = 5.0;
-   rp.request.y_min = -5.0;
-   //rt2_assignment1::Position p;
-   rt2_assignment1::Assignment1Goal goal;
-      
-   actionlib::SimpleClientGoalState get_state = ac.getState();
-   
+   rp.request.y_min = -5.0;   
+ 
    while(ros::ok()){
    	ros::spinOnce();
 
    	switch (options){
-   		/*case 0:
-			std::cout << "\nPress 1 to start the robot" << std::endl;
-			std::cout << "\nPress -1 to cancel the goal" << std::endl;
-			std::cin >> options;
-			break;*/
    		case -1:
    			//ac.getState();
 			ac.cancelGoal();
    			std::cout << "\nGoal was canceled" << std::endl;
    			options = 0;
+   			break;
+   		case 0:			//Useless case
+   			ac.getState();
    			break;
    		case true:
    			//ac.getState();
@@ -70,27 +79,26 @@ int main(int argc, char **argv)
    			goal.theta = rp.response.theta;
    			std::cout << "\nGoing to the position: x= " << goal.x << " y= " <<goal.y << " theta = \n " << goal.theta << std::endl;
    			ac.sendGoal(goal, &simple_done_callback);
-   			options = 0;
+   			ac.waitForResult();
+   			options = 0;	//false = 0
    			break;
    		case 2:
    			//ac.getState();
    			if(get_state == actionlib::SimpleClientGoalState::SUCCEEDED)
 			{
-			std::cout << "\nOn Goal direction" << std::endl;
-			options = 1;
+			std::cout << "\nOn Goal" << std::endl;
+			options = 0;	//false = 0
 			}
 			else if(get_state == actionlib::SimpleClientGoalState::PREEMPTED)
 			{
 			std::cout << "\nCanceled" << std::endl;
-			options = 0;
+			options = 0;	//false = 0
 			}
 			else
 			{
 			std::cout << "\nFailed" << std::endl;
-			options = 0;
+			options = 0;	//false = 0
 			}
-   		//default: 
-   			//std::cout << "\nInvalid option" << std::endl;
    	}
    }
    return 0;
