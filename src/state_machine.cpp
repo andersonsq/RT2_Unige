@@ -16,7 +16,7 @@ bool user_interface(rt2_assignment1::Command::Request &req, rt2_assignment1::Com
 {
     if (req.command == "start")
     	{
-    	options = true;
+    	options = 1;
     	}
     else 
     	{
@@ -42,14 +42,14 @@ int main(int argc, char **argv)
    actionlib::SimpleActionClient<rt2_assignment1::Assignment1Action> ac("go_to_point", true);
    
       //wait for the action server to come up
-   while(!ac.waitForServer(ros::Duration(5.0)))
+  /* while(!ac.waitForServer(ros::Duration(5.0)))
   	{
     	ROS_INFO("Waiting for the move_base action server to come up");
-    	}
+    	}*/
    
    /*local variables*/
    rt2_assignment1::Assignment1Goal goal; 
-   actionlib::SimpleClientGoalState get_state = ac.getState();
+   //actionlib::SimpleClientGoalState get_state = ac.getState();
    
    //Limit where the robot can go
    rt2_assignment1::RandomPosition rp;
@@ -68,10 +68,10 @@ int main(int argc, char **argv)
    			std::cout << "\nGoal was canceled" << std::endl;
    			options = 0;
    			break;
-   		case 0:			//Useless case
+   		/*case 0:			//Useless case
    			ac.getState();
-   			break;
-   		case true:
+   			break;*/
+   		case 1:
    			//ac.getState();
    			client_rp.call(rp);
    			goal.x = rp.response.x;
@@ -79,15 +79,16 @@ int main(int argc, char **argv)
    			goal.theta = rp.response.theta;
    			std::cout << "\nGoing to the position: x= " << goal.x << " y= " <<goal.y << " theta = \n " << goal.theta << std::endl;
    			ac.sendGoal(goal, &simple_done_callback);
-   			ac.waitForResult();
+   			//ac.waitForResult();
    			options = 0;	//false = 0
    			break;
    		case 2:
    			//ac.getState();
+   			actionlib::SimpleClientGoalState get_state = ac.getState();
    			if(get_state == actionlib::SimpleClientGoalState::SUCCEEDED)
 			{
 			std::cout << "\nOn Goal" << std::endl;
-			options = 0;	//false = 0
+			options = 1;	//false = 0
 			}
 			else if(get_state == actionlib::SimpleClientGoalState::PREEMPTED)
 			{

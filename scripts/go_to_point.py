@@ -152,6 +152,7 @@ def go_to_point(goal):		##Action goal
     		rospy.loginfo('Goal was preempted')
     		act_s.set_preempted()
     		objective = False
+    		done()
     	else:
 	    	if state_ == 0:
 	    		fix_yaw(desired_position)
@@ -164,6 +165,7 @@ def go_to_point(goal):		##Action goal
 	    		fix_final_yaw(des_yaw)
 	    	elif state_ == 3:
 	    		feedback.feedback = 'You reached the GOAL !!! Congratulations'
+	    		done()
 	    	else:
                 	rospy.logerr('Unknown state!')
                 
