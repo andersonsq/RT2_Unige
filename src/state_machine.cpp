@@ -73,7 +73,7 @@ int main(int argc, char **argv)
    			goal.theta = rp.response.theta;
    			std::cout << "\nGoing to the position: x= " << goal.x << " y= " <<goal.y << " theta = \n " << goal.theta << std::endl;
    			ac.sendGoal(goal, &simple_done_callback);
-   			options = 2;	//false = 0
+   			options = 0;	//false = 0
    			break; 
    		case 2:
    			actionlib::SimpleClientGoalState get_state = ac.getState();
