@@ -171,15 +171,12 @@ def go_to_point(goal):		##Action goal
                 
 	    	act_s.publish_feedback(feedback)
 	    	rate.sleep()
-    		done()
-    		break
-    #return True
     
     if objective:
     	result.result = objective
     	rospy.loginfo('Objective complete')
     	act_s.set_succeeded(result)
-
+    	
 def main():
     global pub_, act_s
     rospy.init_node('go_to_point')

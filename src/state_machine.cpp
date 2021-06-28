@@ -26,7 +26,7 @@ bool user_interface(rt2_assignment1::Command::Request &req, rt2_assignment1::Com
 }
 
 /*void function to check my robot status*/
-void simple_done_callback(const actionlib::SimpleClientGoalState & get_state, const rt2_assignment1::Assignment1ResultConstPtr & result)
+void simple_done_callback(const actionlib::SimpleClientGoalState &get_state, const rt2_assignment1::Assignment1ResultConstPtr &result)
 {    
   options = 2;
 }
@@ -40,13 +40,7 @@ int main(int argc, char **argv)
    ros::ServiceServer service= n.advertiseService("/user_interface", user_interface);
    ros::ServiceClient client_rp = n.serviceClient<rt2_assignment1::RandomPosition>("/position_server");
    actionlib::SimpleActionClient<rt2_assignment1::Assignment1Action> ac("go_to_point", true);
-   
-      //wait for the action server to come up
-  /* while(!ac.waitForServer(ros::Duration(5.0)))
-  	{
-    	ROS_INFO("Waiting for the move_base action server to come up");
-    	}*/
-   
+    
    /*local variables*/
    rt2_assignment1::Assignment1Goal goal; 
    //actionlib::SimpleClientGoalState get_state = ac.getState();
@@ -79,11 +73,9 @@ int main(int argc, char **argv)
    			goal.theta = rp.response.theta;
    			std::cout << "\nGoing to the position: x= " << goal.x << " y= " <<goal.y << " theta = \n " << goal.theta << std::endl;
    			ac.sendGoal(goal, &simple_done_callback);
-   			//ac.waitForResult();
-   			options = 0;	//false = 0
-   			break;
+   			options = 2;	//false = 0
+   			break; 
    		case 2:
-   			//ac.getState();
    			actionlib::SimpleClientGoalState get_state = ac.getState();
    			if(get_state == actionlib::SimpleClientGoalState::SUCCEEDED)
 			{
