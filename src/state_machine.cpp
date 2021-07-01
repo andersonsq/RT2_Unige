@@ -1,3 +1,4 @@
+/*
 #include "ros/ros.h"
 #include "rt2_assignment1/Command.h"
 #include "rt2_assignment1/Position.h"
@@ -45,3 +46,5 @@ int main(int argc, char **argv)
    }
    return 0;
 }
+*/
+
