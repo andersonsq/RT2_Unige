@@ -1,3 +1,83 @@
+#include <chrono>
+#include <memory>
+#include <inttypes.h>
+
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/string.hpp"
+
+#include "rt2_assignment1/srv/RandomPosition.hpp"
+#include "rt2_assignment1/srv/Command.hpp"
+#include "rt2_assignment1/srv/Position.hpp"
+
+using namespace std::chrono_literals;
+
+using RandomPosition = rt2_assignment1::srv::RandomPosition;	
+using Command = rt2_assignment1::srv::Command;	
+using Position = rt2_assignment1::srv::Position;	
+
+namespace rt2_assignment1{
+
+class State_Machine : public rclcpp::Node
+{
+public:
+	State_Machine(const rclcpp::NodeOptions & options)
+	: Node("state_machine", options)
+	{
+	start = false;
+	position_reached = true;
+	
+  void user_interface(  	
+  	const std::shared_ptr<Command::Request> req,
+  	const std::shared_ptr<Command::Response> res)
+  	const std::shared_ptr<rmw_request_id_t> request_header,
+  	{
+  	(void) request_header;
+  		if (req->command == "start")
+  		{
+  		start = true;
+  		}
+  		else
+  		{
+  		start = false;
+  		}
+  	res->ok = start;
+  	RCLCPP_INFO(this->get_logger(), "Received request %s", req->command.c_str());
+  	}  	
+
+//Initializqtion client and service    
+      client_rp = this->create_client<RandomPosition>("/position_server");
+      
+      service_ = this->create_service<Command>(
+      "/user_interface", std::bind(&State_Machine::user_interface, this));  
+      
+    while (!client_->wait_for_service(std::chrono::seconds(1))){
+     if (!rclcpp::ok()) {
+      RCLCPP_ERROR(this->get_logger(), "client interrupted while waiting for service to appear.");
+      return;
+    }
+    RCLCPP_INFO(this->get_logger(), "waiting for service to appear...");
+  }
+  
+  client_p = this->create_client<Position>("/go_to_point");
+  
+  while (!client_->wait_for_service(std::chrono::seconds(1))){
+     if (!rclcpp::ok()) {
+      RCLCPP_ERROR(this->get_logger(), "client interrupted while waiting for service to appear.");
+      return;
+    }
+    RCLCPP_INFO(this->get_logger(), "waiting for service to appear...");
+  }
+  
+  rp_req = std::make_shared<RandomPosition::Request>();
+  p_req = std::make_shared<Position::Request>();
+  rp_res = std::make_shared<RandomPosition::Response>();
+  
+  rp_req->x_max = 5.0;
+  rp_req->x_min = -5.0;
+  rp_req->y_max = 5.0;
+  rp_req->y_min = -5.0;
+}  
+}
 /*
 #include "ros/ros.h"
 #include "rt2_assignment1/Command.h"
