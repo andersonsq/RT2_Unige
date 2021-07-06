@@ -76,8 +76,28 @@ public:
   rp_req->x_min = -5.0;
   rp_req->y_max = 5.0;
   rp_req->y_min = -5.0;
-}  
 }
+void myrandom_call(){  
+	auto rp_res_callback = [this](rclcpp::Client<rt2_assignment1::srv::RandomPosition>::SharedFuture future){rp_res = future.get();};
+	auto future_result = client_rp->async_send_request(rp_req, rp_res_callback);
+}
+
+//int main() part
+
+bool start, position_reached;
+
+const std::shared_ptr<RandomPosition::Request> rp_req, 
+const std::shared_ptr<RandomPosition::Response> rp_res, 
+const std::shared_ptr<Position::Request> p_req)
+
+rclcpp::Client<RandomPosition>::SharedPtr client_rp;
+rclcpp::Service<Command>::SharedPtr service_;
+rclcpp::Client<Position>::SharedPtr client_p;
+};
+}
+
+RCLCPP_COMPONENTS_REGISTER_NODE(rt2_assignment1::State_Machine)
+
 /*
 #include "ros/ros.h"
 #include "rt2_assignment1/Command.h"
