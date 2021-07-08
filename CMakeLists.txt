@@ -25,6 +25,12 @@ find_package(std_msgs REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
+rosidl_generate_interfaces(${PROJECT_NAME}
+    "srv/Command.srv"
+    "srv/Position.srv"
+    "srv/RandomPosition.srv"
+)
+
 add_library(position_srv SHARED
   src/position_service.cpp)
   
@@ -41,6 +47,13 @@ rclcpp_components_register_node(state_machine
   
 ament_target_dependencies(position_srv rclcpp rclcpp_components std_msgs)
 ament_target_dependencies(state_machine rclcpp rclcpp_components std_msgs)
+
+rosidl_target_interfaces(position_srv 
+    ${PROJECT_NAME} "rosidl_typesupport_cpp"
+)
+rosidl_target_interfaces(state_machine 
+    ${PROJECT_NAME} "rosidl_typesupport_cpp"
+)
 
 install(TARGETS
   position_srv state_machine

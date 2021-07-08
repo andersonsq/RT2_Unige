@@ -5,7 +5,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
-#include "rt2_assignment1/srv/RandomPosition.hpp"
+#include "rt2_assignment1/srv/random_position.hpp"
 
 //Register a component that can be dynamically loaded at runtime
 #include "rclcpp_components/register_node_macro.hpp"

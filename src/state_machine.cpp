@@ -5,9 +5,12 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
-#include "rt2_assignment1/srv/RandomPosition.hpp"
-#include "rt2_assignment1/srv/Command.hpp"
-#include "rt2_assignment1/srv/Position.hpp"
+#include "rt2_assignment1/srv/random_position.hpp"
+#include "rt2_assignment1/srv/command.hpp"
+#include "rt2_assignment1/srv/position.hpp"
+
+#include "rclcpp_components/register_node_macro.hpp"
+//#include <cinttypes>
 
 using namespace std::chrono_literals;
 
@@ -25,33 +28,15 @@ public:
 	{
 	start = false;
 	position_reached = true;
-	
-  void user_interface(  	
-  	const std::shared_ptr<Command::Request> req,
-  	const std::shared_ptr<Command::Response> res)
-  	const std::shared_ptr<rmw_request_id_t> request_header,
-  	{
-  	(void) request_header;
-  		if (req->command == "start")
-  		{
-  		start = true;
-  		}
-  		else
-  		{
-  		start = false;
-  		}
-  	res->ok = start;
-  	RCLCPP_INFO(this->get_logger(), "Received request %s", req->command.c_str());
-  	}  	
 
-//Initializqtion client and service    
+	
+	//Initialization client and service    
       client_rp = this->create_client<RandomPosition>("/position_server");
-      
       service_ = this->create_service<Command>(
-      "/user_interface", std::bind(&State_Machine::user_interface, this));  
+      "/user_interface", std::bind(&State_Machine::user_interface, this));
       
-    while (!client_->wait_for_service(std::chrono::seconds(1))){
-     if (!rclcpp::ok()) {
+      while (!client_rp->wait_for_service(std::chrono::seconds(1))){
+      	if (!rclcpp::ok()) {
       RCLCPP_ERROR(this->get_logger(), "client interrupted while waiting for service to appear.");
       return;
     }
@@ -60,7 +45,7 @@ public:
   
   client_p = this->create_client<Position>("/go_to_point");
   
-  while (!client_->wait_for_service(std::chrono::seconds(1))){
+  while (!client_p->wait_for_service(std::chrono::seconds(1))){
      if (!rclcpp::ok()) {
       RCLCPP_ERROR(this->get_logger(), "client interrupted while waiting for service to appear.");
       return;
@@ -76,7 +61,46 @@ public:
   rp_req->x_min = -5.0;
   rp_req->y_max = 5.0;
   rp_req->y_min = -5.0;
-}
+}        
+	
+  void user_interface(
+  	 const std::shared_ptr<Command::Request> req,
+  	 const std::shared_ptr<Command::Response> res,
+  	 const std::shared_ptr<rmw_request_id_t> request_header)
+  	{
+  	(void) request_header;
+  		if (req->command == "start")
+  		{
+  		start = true;
+  		Go_To_Point();
+  		}
+  		else
+  		{
+  		start = false;
+  		}
+  	res->ok = start;
+  	RCLCPP_INFO(this->get_logger(), "Received request %s", req->command.c_str());
+  	}  	
+
+void Go_To_Point(){
+    
+    myrandom_call();
+    
+    position_reached = false; // a new goal is received
+    
+    p_req->x = rp_res->x;
+    p_req->y = rp_res->y;
+    p_req->theta = rp_res->theta;
+    
+    RCLCPP_INFO(this->get_logger(), "Going to the position: x= %f y= %f theta= %f",
+            p_req->x, p_req->y, p_req->theta);
+    // If we reached the goal set the flag goal_reached to true
+    auto point_reached_callback =
+              [this](rclcpp::Client<rt2_assignment1::srv::Position>::SharedFuture future){(void)future; position_reached = true;
+               RCLCPP_INFO(this->get_logger(), "Goal reached!");};
+    auto future_result = client_p->async_send_request(p_req, point_reached_callback);
+  }
+
 void myrandom_call(){  
 	auto rp_res_callback = [this](rclcpp::Client<rt2_assignment1::srv::RandomPosition>::SharedFuture future){rp_res = future.get();};
 	auto future_result = client_rp->async_send_request(rp_req, rp_res_callback);
@@ -86,9 +110,9 @@ void myrandom_call(){
 
 bool start, position_reached;
 
-const std::shared_ptr<RandomPosition::Request> rp_req, 
-const std::shared_ptr<RandomPosition::Response> rp_res, 
-const std::shared_ptr<Position::Request> p_req)
+ std::shared_ptr<RandomPosition::Request> rp_req;
+ std::shared_ptr<RandomPosition::Response> rp_res; 
+ std::shared_ptr<Position::Request> p_req;
 
 rclcpp::Client<RandomPosition>::SharedPtr client_rp;
 rclcpp::Service<Command>::SharedPtr service_;
