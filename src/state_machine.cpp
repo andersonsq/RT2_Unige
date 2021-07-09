@@ -14,9 +14,13 @@
 
 using namespace std::chrono_literals;
 
-using RandomPosition = rt2_assignment1::srv::RandomPosition;	
 using Command = rt2_assignment1::srv::Command;	
-using Position = rt2_assignment1::srv::Position;	
+using Position = rt2_assignment1::srv::Position;
+using RandomPosition = rt2_assignment1::srv::RandomPosition;	
+
+using std::placeholders::_1;
+using std::placeholders::_2;
+using std::placeholders::_3;	
 
 namespace rt2_assignment1{
 
@@ -28,12 +32,12 @@ public:
 	{
 	start = false;
 	position_reached = true;
-
 	
-	//Initialization client and service    
-      client_rp = this->create_client<RandomPosition>("/position_server");
+	//Initialization client and service  
+	
       service_ = this->create_service<Command>(
-      "/user_interface", std::bind(&State_Machine::user_interface, this));
+      "/user_interface", std::bind(&State_Machine::user_interface, this, _1, _2, _3));  
+      client_rp = this->create_client<RandomPosition>("/position_server");
       
       while (!client_rp->wait_for_service(std::chrono::seconds(1))){
       	if (!rclcpp::ok()) {
@@ -54,19 +58,19 @@ public:
   }
   
   rp_req = std::make_shared<RandomPosition::Request>();
-  p_req = std::make_shared<Position::Request>();
   rp_res = std::make_shared<RandomPosition::Response>();
+  p_req = std::make_shared<Position::Request>();
   
   rp_req->x_max = 5.0;
   rp_req->x_min = -5.0;
   rp_req->y_max = 5.0;
   rp_req->y_min = -5.0;
 }        
-	
+	/*should be request_header, req, res*/
   void user_interface(
+  	 const std::shared_ptr<rmw_request_id_t> request_header,
   	 const std::shared_ptr<Command::Request> req,
-  	 const std::shared_ptr<Command::Response> res,
-  	 const std::shared_ptr<rmw_request_id_t> request_header)
+  	 const std::shared_ptr<Command::Response> res)
   	{
   	(void) request_header;
   		if (req->command == "start")
@@ -110,13 +114,14 @@ void myrandom_call(){
 
 bool start, position_reached;
 
- std::shared_ptr<RandomPosition::Request> rp_req;
- std::shared_ptr<RandomPosition::Response> rp_res; 
- std::shared_ptr<Position::Request> p_req;
-
-rclcpp::Client<RandomPosition>::SharedPtr client_rp;
 rclcpp::Service<Command>::SharedPtr service_;
+rclcpp::Client<RandomPosition>::SharedPtr client_rp;
 rclcpp::Client<Position>::SharedPtr client_p;
+
+std::shared_ptr<RandomPosition::Request> rp_req;
+std::shared_ptr<RandomPosition::Response> rp_res;
+std::shared_ptr<Position::Request> p_req;
+
 };
 }
 

@@ -28,7 +28,7 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-    <!--ADD AFTER THE '.yaml' -->
+    <ros1_bridge my_mapping_rules="my_mapping_rules.yaml"/>
   </export>
   
   <!--ADD AFTER THE 'member_of_group' -->

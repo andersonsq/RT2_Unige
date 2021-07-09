@@ -14,6 +14,10 @@ using namespace std::chrono_literals;
 
 using RandomPosition = rt2_assignment1::srv::RandomPosition;	//name of my .srv file, I'll get the informations from there
 
+using std::placeholders::_1;
+using std::placeholders::_2;
+using std::placeholders::_3;
+
 namespace rt2_assignment1{
 
 class Position_srv : public rclcpp::Node
@@ -23,7 +27,7 @@ public:
 	: Node("random_position_server", options)
 	{
 		service_ = this->create_service<RandomPosition>(
-      "/position_server", std::bind(&Position_srv::myrandom, this));
+      "/position_server", std::bind(&Position_srv::myrandom, this, _1, _2, _3));
       }
 
 private:
@@ -32,9 +36,9 @@ private:
 
 
 void myrandom (
+	const std::shared_ptr<rmw_request_id_t> request_header,
 	const std::shared_ptr<RandomPosition::Request> req, 
-	const std::shared_ptr<RandomPosition::Response> res, 
-	const std::shared_ptr<rmw_request_id_t> request_header)
+	const std::shared_ptr<RandomPosition::Response> res)
 	{
 	(void)request_header;
 	res->x = randMToN(req->x_min, req->x_max);
