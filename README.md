@@ -29,10 +29,10 @@ In this ROS2 package, it is possible to communicate with nodes declared in our R
 The behaviour of the robot will depend on commands given by the user, they can be:
 
 - **start:**
-- 1. Receives a random value for X, Y and Theta
-- 2. Based on the value of theta, rotates the robot until gets alligned with the goal value (X and Y)
-- 3. Moves the robot towards the coodinates of X and Y
-- 4. When reach the target, repeat the process
+1. Receives a random value for X, Y and Theta
+2. Based on the value of theta, rotates the robot until gets alligned with the goal value (X and Y)
+3. Moves the robot towards the coodinates of X and Y
+4. When reach the target, repeat the process
 
 - **stop:** 
 Because our user request is implemented as a service, the system will only read the user command when the robot reached its goal, being impossible to stop midway.
