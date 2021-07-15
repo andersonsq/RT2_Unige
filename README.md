@@ -50,13 +50,13 @@ To compile, follow the next steps:
 
 ### Communication with ROS1
 
-- 1. Source your ROS version in a different shell
+1. Source your ROS version in a different shell
 ```
 source ros.sh
 roslaunch rt2_assignment1 bridge.launch
 ```
 
-- 2. Source your ROS2 version in a different shell
+2. Source your ROS2 version in a different shell
 ```
 source ros2.sh
 ros2 run ros1_bridge dynamic_bridge
@@ -64,7 +64,7 @@ ros2 run ros1_bridge dynamic_bridge
 
 #### Launching the UDF mobile robot
 
-- 3. Source your ROS12 version in a different shell
+3. Source your ROS12 version in a different shell
 ```
 source bridge_rt2.sh
 ros2 launch rt2_assignment1 sim_launch.py
