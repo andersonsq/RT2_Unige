@@ -1,0 +1,10 @@
+<map id="src/state_machine.cpp" name="src/state_machine.cpp">
+<area shape="rect" id="node1" title="Implements a service to start or stop the robot, and calls the other two services to drive the robot." alt="" coords="613,5,781,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,84,114"/>
+<area shape="rect" id="node3" title=" " alt="" coords="108,87,323,114"/>
+<area shape="rect" id="node4" title=" " alt="" coords="347,87,545,114"/>
+<area shape="rect" id="node5" title=" " alt="" coords="570,87,823,114"/>
+<area shape="rect" id="node6" title=" " alt="" coords="848,80,1068,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1092,80,1259,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1283,80,1460,121"/>
+</map>
