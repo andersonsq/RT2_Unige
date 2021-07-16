@@ -78,4 +78,7 @@ roslaunch rt2_assignment1 Robotnik_coppelia_scene.launch
 
 ## Futher information
 
-**TO BE ADDED AFTER FINISH THE DOCUMENTATION**
+To have acess to the documentation of this project, you need to go to:
+- folder `docs`
+- double click on the file `files.html`
+ 
