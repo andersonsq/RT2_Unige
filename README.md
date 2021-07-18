@@ -72,5 +72,8 @@ ros2 launch rt2_assignment1 sim_launch.py
 
 ## Futher information
 
-**TO BE ADDED AFTER FINISH THE DOCUMENTATION**
+To have acess to the documentation of this project, you need to go to:
+- folder `doc`
+- folder `html`
+- double click on the file `files.html`
 

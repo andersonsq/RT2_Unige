@@ -1,0 +1,102 @@
+\hypertarget{classrt2__assignment1_1_1_position__srv}{}\doxysection{rt2\+\_\+assignment1\+::Position\+\_\+srv Class Reference}
+\label{classrt2__assignment1_1_1_position__srv}\index{rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}}
+
+
+Inheritance diagram for rt2\+\_\+assignment1\+::Position\+\_\+srv\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classrt2__assignment1_1_1_position__srv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rt2\+\_\+assignment1\+::Position\+\_\+srv\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classrt2__assignment1_1_1_position__srv__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrt2__assignment1_1_1_position__srv_ac62541ad64ebaf1e71cc738c7ad1d56b}{Position\+\_\+srv}} (const rclcpp\+::\+Node\+Options \&options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classrt2__assignment1_1_1_position__srv_a3dc3aa15b37c277980dc4a7812b13a65}{rand\+M\+ToN}} (double M, double N)
+\item 
+void \mbox{\hyperlink{classrt2__assignment1_1_1_position__srv_aeecf2e21fee2897588a1f480e66741b2}{myrandom}} (const std\+::shared\+\_\+ptr$<$ rmw\+\_\+request\+\_\+id\+\_\+t $>$ request\+\_\+header, const std\+::shared\+\_\+ptr$<$ Random\+Position\+::\+Request $>$ req, const std\+::shared\+\_\+ptr$<$ Random\+Position\+::\+Response $>$ res)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+rclcpp\+::\+Service$<$ \mbox{\hyperlink{position__service_8cpp_af2705121906e5076ffa0d8c925e354b2}{Random\+Position}} $>$\+::Shared\+Ptr \mbox{\hyperlink{classrt2__assignment1_1_1_position__srv_a17e78bbdc15c58a484075075f1a91b30}{service\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Description\+: Generate a random number between M and N (/position\+\_\+server) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_position__srv_ac62541ad64ebaf1e71cc738c7ad1d56b}\label{classrt2__assignment1_1_1_position__srv_ac62541ad64ebaf1e71cc738c7ad1d56b}} 
+\index{rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}!Position\_srv@{Position\_srv}}
+\index{Position\_srv@{Position\_srv}!rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}}
+\doxysubsubsection{\texorpdfstring{Position\_srv()}{Position\_srv()}}
+{\footnotesize\ttfamily rt2\+\_\+assignment1\+::\+Position\+\_\+srv\+::\+Position\+\_\+srv (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Node\+Options \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & rclcpp\+::\+Node\+Options (options)\\
+\hline
+\end{DoxyParams}
+Description\+: Run the node (random\+\_\+position\+\_\+server) as a component 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_position__srv_aeecf2e21fee2897588a1f480e66741b2}\label{classrt2__assignment1_1_1_position__srv_aeecf2e21fee2897588a1f480e66741b2}} 
+\index{rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}!myrandom@{myrandom}}
+\index{myrandom@{myrandom}!rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}}
+\doxysubsubsection{\texorpdfstring{myrandom()}{myrandom()}}
+{\footnotesize\ttfamily void rt2\+\_\+assignment1\+::\+Position\+\_\+srv\+::myrandom (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ rmw\+\_\+request\+\_\+id\+\_\+t $>$}]{request\+\_\+header,  }\item[{const std\+::shared\+\_\+ptr$<$ Random\+Position\+::\+Request $>$}]{req,  }\item[{const std\+::shared\+\_\+ptr$<$ Random\+Position\+::\+Response $>$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rmw\+\_\+request\+\_\+id\+\_\+t} & (request\+\_\+header) \\
+\hline
+{\em Random\+Position\+::\+Request} & (req) -\/ service with x and y range \\
+\hline
+{\em Random\+Position\+::\+Response} & (res) -\/ service with x, y and theta\\
+\hline
+\end{DoxyParams}
+Description\+: My service callback that generates the random values for the positions x, y and theta \mbox{\Hypertarget{classrt2__assignment1_1_1_position__srv_a3dc3aa15b37c277980dc4a7812b13a65}\label{classrt2__assignment1_1_1_position__srv_a3dc3aa15b37c277980dc4a7812b13a65}} 
+\index{rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}!randMToN@{randMToN}}
+\index{randMToN@{randMToN}!rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}}
+\doxysubsubsection{\texorpdfstring{randMToN()}{randMToN()}}
+{\footnotesize\ttfamily double rt2\+\_\+assignment1\+::\+Position\+\_\+srv\+::rand\+M\+ToN (\begin{DoxyParamCaption}\item[{double}]{M,  }\item[{double}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & (M) \\
+\hline
+{\em double} & (N)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double (rand\+M\+ToN)
+\end{DoxyReturn}
+Description\+: Generate a random number between M and N (/position\+\_\+server) 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_position__srv_a17e78bbdc15c58a484075075f1a91b30}\label{classrt2__assignment1_1_1_position__srv_a17e78bbdc15c58a484075075f1a91b30}} 
+\index{rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}!service\_@{service\_}}
+\index{service\_@{service\_}!rt2\_assignment1::Position\_srv@{rt2\_assignment1::Position\_srv}}
+\doxysubsubsection{\texorpdfstring{service\_}{service\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Service$<$\mbox{\hyperlink{position__service_8cpp_af2705121906e5076ffa0d8c925e354b2}{Random\+Position}}$>$\+::Shared\+Ptr rt2\+\_\+assignment1\+::\+Position\+\_\+srv\+::service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/anderson/my\+\_\+ros2/src/rt2\+\_\+assignment1/src/\mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}}\end{DoxyCompactItemize}

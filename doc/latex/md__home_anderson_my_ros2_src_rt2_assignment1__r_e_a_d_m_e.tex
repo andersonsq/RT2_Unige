@@ -1,0 +1,73 @@
+The package contains the nodes and the simulation environment for controlling a mobile robot in the Gazebo simulation environment.\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Table of contents}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{\#requirements}{\texttt{ Requirements}}
+\item \href{\#general-info}{\texttt{ General info}}
+\item \href{\#description-of-the-system}{\texttt{ Description of the system}}
+\item \href{\#codes-and-nodes}{\texttt{ Codes and nodes}}
+\item \href{\#running-the-code}{\texttt{ Running the code}}
+\item \href{\#futher-information}{\texttt{ Futher information}}
+\end{DoxyItemize}\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Requirements}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md2}
+To properly oberserve and run correctly the behaviour of the mobile robot in your machine, it\textquotesingle{}s necessary to have in your linux system\+:
+\begin{DoxyItemize}
+\item Ubuntu 20.\+04
+\item R\+OS Noetic
+\item R\+O\+S2 Foxy
+\item Python3
+\item Gazebo
+\item Package ros1\+\_\+bridge
+\end{DoxyItemize}\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md3}{}\doxysection{General info}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md3}
+This package is responsible to control a mobile robot when receives a {\ttfamily go\+\_\+to\+\_\+point} command from the user.\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Description of the system}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md4}
+In this R\+O\+S2 package, it is possible to communicate with nodes declared in our R\+O\+S1 package in order to command a mobile robot in a Gazebo environment. The behaviour of the robot will depend on commands given by the user, they can be\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{start\+:}}
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Receives a random value for X, Y and Theta
+\item Based on the value of theta, rotates the robot until gets alligned with the goal value (X and Y)
+\item Moves the robot towards the coodinates of X and Y
+\item When reach the target, repeat the process
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item {\bfseries{stop\+:}} Because our user request is implemented as a service, the system will only read the user command when the robot reached its goal, being impossible to stop midway.
+\end{DoxyItemize}\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Codes and nodes}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md5}
+In this package, at the src folder, it\textquotesingle{}s possible to find 2 \textquotesingle{}.cpp\textquotesingle{} extension files, each one with it\textquotesingle{}s own node\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}}\+:}} It generates and retreive a random position for x, y and theta when requested.
+\item {\bfseries{\mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}}\+:}} Send a {\itshape new} goal/objective to the {\itshape go\+\_\+to\+\_\+point} actoin server
+\end{DoxyItemize}\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Running the code}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md6}
+To compile, follow the next steps\+:\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{Communication with R\+O\+S1}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyEnumerate}
+\item Source your R\+OS version in a different shell 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ros.sh}
+\DoxyCodeLine{roslaunch rt2\_assignment1 bridge.launch}
+\end{DoxyCode}
+
+\item Source your R\+O\+S2 version in a different shell 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ros2.sh}
+\DoxyCodeLine{ros2 run ros1\_bridge dynamic\_bridge}
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md8}{}\doxysubsubsection{Launching the U\+D\+F mobile robot}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyEnumerate}
+\item Source your R\+O\+S12 version in a different shell 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source bridge\_rt2.sh}
+\DoxyCodeLine{ros2 launch rt2\_assignment1 sim\_launch.py}
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md9}{}\doxysection{Futher information}\label{md__home_anderson_my_ros2_src_rt2_assignment1__r_e_a_d_m_e_autotoc_md9}
+To have acess to the documentation of this project, you need to go to\+:
+\begin{DoxyItemize}
+\item folder {\ttfamily doc}
+\item folder {\ttfamily html}
+\item double click on the file {\ttfamily files.\+html} 
+\end{DoxyItemize}

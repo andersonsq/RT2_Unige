@@ -1,3 +1,11 @@
+/**
+* \file position_service.cpp
+* \brief Node random_position_server, which implements a random position service
+* \author Anderson Siqueira
+* \version 0.1
+* \date 18/07/2021
+*/
+
 #include <chrono>
 #include <memory>
 #include <inttypes.h>
@@ -7,7 +15,7 @@
 
 #include "rt2_assignment1/srv/random_position.hpp"
 
-//Register a component that can be dynamically loaded at runtime
+/*Register a component that can be dynamically loaded at runtime*/
 #include "rclcpp_components/register_node_macro.hpp"
 
 using namespace std::chrono_literals;
@@ -19,10 +27,22 @@ using std::placeholders::_2;
 using std::placeholders::_3;
 
 namespace rt2_assignment1{
+/**
+*
+* Description:
+* Generate a random number between M and N (/position_server)
+*/
 
 class Position_srv : public rclcpp::Node
 {
 public:
+/**
+*
+* \param const rclcpp::NodeOptions (options)
+*
+* Description:
+* Run the node (random_position_server) as a component
+*/
 	Position_srv(const rclcpp::NodeOptions & options)
 	: Node("random_position_server", options)
 	{
@@ -31,9 +51,28 @@ public:
       }
 
 private:
+/**
+*
+* \param double (M)
+* \param double (N)
+*
+* \return double (randMToN)
+*
+* Description:
+* Generate a random number between M and N (/position_server)
+*/
 	double randMToN(double M, double N)
 {     return M + (rand() / ( RAND_MAX / (N-M) ) ) ; }
 
+/**
+*
+* \param rmw_request_id_t (request_header)
+* \param RandomPosition::Request (req) - service with x and y range
+* \param RandomPosition::Response (res) - service with x, y and theta
+*
+* Description:
+* My service callback that generates the random values for the positions x, y and theta
+*/
 
 void myrandom (
 	const std::shared_ptr<rmw_request_id_t> request_header,

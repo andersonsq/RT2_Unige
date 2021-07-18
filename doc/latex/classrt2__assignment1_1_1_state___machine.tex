@@ -1,0 +1,153 @@
+\hypertarget{classrt2__assignment1_1_1_state___machine}{}\doxysection{rt2\+\_\+assignment1\+::State\+\_\+\+Machine Class Reference}
+\label{classrt2__assignment1_1_1_state___machine}\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+
+
+Inheritance diagram for rt2\+\_\+assignment1\+::State\+\_\+\+Machine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classrt2__assignment1_1_1_state___machine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rt2\+\_\+assignment1\+::State\+\_\+\+Machine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classrt2__assignment1_1_1_state___machine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_a2909235cb77c3ef07c5540968b8965cc}{State\+\_\+\+Machine}} (const rclcpp\+::\+Node\+Options \&options)
+\item 
+void \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_aac763514d882176946e0c3a6a542c903}{user\+\_\+interface}} (const std\+::shared\+\_\+ptr$<$ rmw\+\_\+request\+\_\+id\+\_\+t $>$ request\+\_\+header, const std\+::shared\+\_\+ptr$<$ Command\+::\+Request $>$ req, const std\+::shared\+\_\+ptr$<$ Command\+::\+Response $>$ res)
+\item 
+void \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_a817b4e2b5e2e5f110cd795524eae71a1}{Go\+\_\+\+To\+\_\+\+Point}} ()
+\item 
+void \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_a068f3e0b1824d57476c113345f37c91b}{myrandom\+\_\+call}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_aa8bb01d3eec9599f29910e54a143f21b}{start}}
+\item 
+bool \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_accf48e92017ce6670003f5447e619d8d}{position\+\_\+reached}}
+\item 
+rclcpp\+::\+Service$<$ \mbox{\hyperlink{state__machine_8cpp_a01618d307a505e816be5fd62d95af605}{Command}} $>$\+::Shared\+Ptr \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_aad6ba7718ec658fbf694c5a980c2ca89}{service\+\_\+}}
+\item 
+rclcpp\+::\+Client$<$ \mbox{\hyperlink{position__service_8cpp_af2705121906e5076ffa0d8c925e354b2}{Random\+Position}} $>$\+::Shared\+Ptr \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_a1ec13fc1d3990e48704c7defcbeaa0d2}{client\+\_\+rp}}
+\item 
+rclcpp\+::\+Client$<$ \mbox{\hyperlink{state__machine_8cpp_aa0c8c641774e9698c3af1019b0ed3bf1}{Position}} $>$\+::Shared\+Ptr \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_af771f31326483b1d7c6ee0f3055bdfa7}{client\+\_\+p}}
+\item 
+std\+::shared\+\_\+ptr$<$ Random\+Position\+::\+Request $>$ \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_af2525a8e8bedae9a318606c526256a61}{rp\+\_\+req}}
+\item 
+std\+::shared\+\_\+ptr$<$ Random\+Position\+::\+Response $>$ \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_ae5cb4f62ae3ef3182e8f6c0d5b267676}{rp\+\_\+res}}
+\item 
+std\+::shared\+\_\+ptr$<$ Position\+::\+Request $>$ \mbox{\hyperlink{classrt2__assignment1_1_1_state___machine_a51942440ca2ece6e33b8a226de0031cf}{p\+\_\+req}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Description\+: Receives the user\textquotesingle{}s request to start moving the mobile robot, the random pose is received by the /position\+\_\+server and then sent to go\+\_\+to\+\_\+point service, the process will repeat in a loop unitl the user send a command for the robot stop 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_a2909235cb77c3ef07c5540968b8965cc}\label{classrt2__assignment1_1_1_state___machine_a2909235cb77c3ef07c5540968b8965cc}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!State\_Machine@{State\_Machine}}
+\index{State\_Machine@{State\_Machine}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{State\_Machine()}{State\_Machine()}}
+{\footnotesize\ttfamily rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::\+State\+\_\+\+Machine (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Node\+Options \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rclcpp\+::\+Node\+Options} & (options) run the node as component\\
+\hline
+\end{DoxyParams}
+Description\+: Initialize the variables, server and 2 clients 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_a817b4e2b5e2e5f110cd795524eae71a1}\label{classrt2__assignment1_1_1_state___machine_a817b4e2b5e2e5f110cd795524eae71a1}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!Go\_To\_Point@{Go\_To\_Point}}
+\index{Go\_To\_Point@{Go\_To\_Point}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{Go\_To\_Point()}{Go\_To\_Point()}}
+{\footnotesize\ttfamily void rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::\+Go\+\_\+\+To\+\_\+\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Description\+: Receive and set a new goal position, this position comes from /position\+\_\+server and go to /go\+\_\+to\+\_\+point as a request to set the new goal position for the robot. \mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_a068f3e0b1824d57476c113345f37c91b}\label{classrt2__assignment1_1_1_state___machine_a068f3e0b1824d57476c113345f37c91b}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!myrandom\_call@{myrandom\_call}}
+\index{myrandom\_call@{myrandom\_call}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{myrandom\_call()}{myrandom\_call()}}
+{\footnotesize\ttfamily void rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::myrandom\+\_\+call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Description\+: Function that call my rnaodm position service. The positon of the goal received from the /position\+\_\+server service is stored in the variable rp\+\_\+res as a \char`\"{}copy\char`\"{} \mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_aac763514d882176946e0c3a6a542c903}\label{classrt2__assignment1_1_1_state___machine_aac763514d882176946e0c3a6a542c903}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!user\_interface@{user\_interface}}
+\index{user\_interface@{user\_interface}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{user\_interface()}{user\_interface()}}
+{\footnotesize\ttfamily void rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::user\+\_\+interface (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ rmw\+\_\+request\+\_\+id\+\_\+t $>$}]{request\+\_\+header,  }\item[{const std\+::shared\+\_\+ptr$<$ Command\+::\+Request $>$}]{req,  }\item[{const std\+::shared\+\_\+ptr$<$ Command\+::\+Response $>$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rmw\+\_\+request\+\_\+id\+\_\+t} & (request\+\_\+header) Call header\\
+\hline
+{\em Command\+::\+Request} & (req) Service Request with command (string)\\
+\hline
+{\em Command\+::\+Response} & (res) Service Response with the value of the bool (start)\\
+\hline
+\end{DoxyParams}
+Description\+: Service callback to set the start and stop arguments state 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_af771f31326483b1d7c6ee0f3055bdfa7}\label{classrt2__assignment1_1_1_state___machine_af771f31326483b1d7c6ee0f3055bdfa7}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!client\_p@{client\_p}}
+\index{client\_p@{client\_p}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{client\_p}{client\_p}}
+{\footnotesize\ttfamily rclcpp\+::\+Client$<$\mbox{\hyperlink{state__machine_8cpp_aa0c8c641774e9698c3af1019b0ed3bf1}{Position}}$>$\+::Shared\+Ptr rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::client\+\_\+p}
+
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_a1ec13fc1d3990e48704c7defcbeaa0d2}\label{classrt2__assignment1_1_1_state___machine_a1ec13fc1d3990e48704c7defcbeaa0d2}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!client\_rp@{client\_rp}}
+\index{client\_rp@{client\_rp}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{client\_rp}{client\_rp}}
+{\footnotesize\ttfamily rclcpp\+::\+Client$<$\mbox{\hyperlink{position__service_8cpp_af2705121906e5076ffa0d8c925e354b2}{Random\+Position}}$>$\+::Shared\+Ptr rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::client\+\_\+rp}
+
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_a51942440ca2ece6e33b8a226de0031cf}\label{classrt2__assignment1_1_1_state___machine_a51942440ca2ece6e33b8a226de0031cf}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!p\_req@{p\_req}}
+\index{p\_req@{p\_req}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{p\_req}{p\_req}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Position\+::\+Request$>$ rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::p\+\_\+req}
+
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_accf48e92017ce6670003f5447e619d8d}\label{classrt2__assignment1_1_1_state___machine_accf48e92017ce6670003f5447e619d8d}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!position\_reached@{position\_reached}}
+\index{position\_reached@{position\_reached}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{position\_reached}{position\_reached}}
+{\footnotesize\ttfamily bool rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::position\+\_\+reached}
+
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_af2525a8e8bedae9a318606c526256a61}\label{classrt2__assignment1_1_1_state___machine_af2525a8e8bedae9a318606c526256a61}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!rp\_req@{rp\_req}}
+\index{rp\_req@{rp\_req}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{rp\_req}{rp\_req}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Random\+Position\+::\+Request$>$ rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::rp\+\_\+req}
+
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_ae5cb4f62ae3ef3182e8f6c0d5b267676}\label{classrt2__assignment1_1_1_state___machine_ae5cb4f62ae3ef3182e8f6c0d5b267676}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!rp\_res@{rp\_res}}
+\index{rp\_res@{rp\_res}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{rp\_res}{rp\_res}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Random\+Position\+::\+Response$>$ rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::rp\+\_\+res}
+
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_aad6ba7718ec658fbf694c5a980c2ca89}\label{classrt2__assignment1_1_1_state___machine_aad6ba7718ec658fbf694c5a980c2ca89}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!service\_@{service\_}}
+\index{service\_@{service\_}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{service\_}{service\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Service$<$\mbox{\hyperlink{state__machine_8cpp_a01618d307a505e816be5fd62d95af605}{Command}}$>$\+::Shared\+Ptr rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::service\+\_\+}
+
+\mbox{\Hypertarget{classrt2__assignment1_1_1_state___machine_aa8bb01d3eec9599f29910e54a143f21b}\label{classrt2__assignment1_1_1_state___machine_aa8bb01d3eec9599f29910e54a143f21b}} 
+\index{rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}!start@{start}}
+\index{start@{start}!rt2\_assignment1::State\_Machine@{rt2\_assignment1::State\_Machine}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily bool rt2\+\_\+assignment1\+::\+State\+\_\+\+Machine\+::start}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/anderson/my\+\_\+ros2/src/rt2\+\_\+assignment1/src/\mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}}\end{DoxyCompactItemize}

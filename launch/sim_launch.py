@@ -1,3 +1,10 @@
+""".. module:: sim_launch
+      :platform: Unix
+      :synopsis: Python module for launching all my nodes 
+      
+      .. Author:: Anderson Siqueira
+"""
+
 import launch
 from launch_ros.actions import ComposableNodeContainer
 from launch_ros.descriptions import ComposableNode
