@@ -87,7 +87,11 @@
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Futher<sp/>information</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">**TO<sp/>BE<sp/>ADDED<sp/>AFTER<sp/>FINISH<sp/>THE<sp/>DOCUMENTATION**</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>have<sp/>acess<sp/>to<sp/>the<sp/>documentation<sp/>of<sp/>this<sp/>project,<sp/>you<sp/>need<sp/>to<sp/>go<sp/>to:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>folder<sp/>`docs`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>folder<sp/>`html`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>double<sp/>click<sp/>on<sp/>the<sp/>file<sp/>`files.html`</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

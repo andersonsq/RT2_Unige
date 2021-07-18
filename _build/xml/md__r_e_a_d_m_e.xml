@@ -96,7 +96,12 @@
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md10">
 <title>Futher information</title>
-<para><bold>TO BE ADDED AFTER FINISH THE DOCUMENTATION</bold> </para>
+<para>To have acess to the documentation of this project, you need to go to:<itemizedlist>
+<listitem><para>folder <computeroutput>docs</computeroutput></para>
+</listitem><listitem><para>folder <computeroutput>html</computeroutput></para>
+</listitem><listitem><para>double click on the file <computeroutput>files.html</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
 </sect1>
     </detaileddescription>
   </compounddef>
