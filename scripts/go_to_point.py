@@ -30,9 +30,10 @@ import motion_plan.msg
 #
 # robot state variables
 position_ = Point()
-"""Point: actual robot position
-
 """
+Point: actual robot position
+"""
+
 yaw_ = 0
 position_ = 0
 state_ = 0
@@ -59,8 +60,8 @@ Arguments: Odometry message (msg)
 
 Description:
 Receives from Odometry message the values of X, Y and theta
-
 """
+
     global position_
     global yaw_
 
@@ -84,6 +85,7 @@ Arguments: state (int)
 Description:
 Update the global state
 """
+
     global state_
     state_ = state
     print ('State changed to [%s]' % state_)
@@ -97,6 +99,7 @@ Arguments: float (angle) -> input
 Description:
 Normalize the angle between pi and -pi
 """
+
     if(math.fabs(angle) > math.pi):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
@@ -110,6 +113,7 @@ Description:
 Orient the robot in direction of goal position (x,y) or achieve it.
 It can also change to a new state depending of the actual orientation.	
 """
+
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = normalize_angle(desired_yaw - yaw_)
     rospy.loginfo(err_yaw)
@@ -135,6 +139,7 @@ Arguments: point (des_pos)
 Description:           
 Set both angular and linear speed depending on the distance between the robot the goal
 """
+
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = desired_yaw - yaw_
     err_pos = math.sqrt(pow(des_pos.y - position_.y, 2) +
@@ -180,6 +185,7 @@ def done():
 Description:
 Stop the robot setting both angular and linear velocity to 0
 """
+
     twist_msg = Twist()
     twist_msg.linear.x = 0
     twist_msg.angular.z = 0
@@ -193,6 +199,7 @@ Description:
 Set an action deppending on the robot actual state. 
 Direct communication with the state machine code, it will run in a loop until the user cancel/preempt the action
 """
+
     global act_s
 		
     desired_position = Point()

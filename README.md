@@ -37,6 +37,8 @@ The launch file will open and start:
 
 Because our user request is implemented as an action, it can be preempted, this way we can stop the robot at any time during the simulation and then restart it with a new goal.
 
+![](Pasta pessoal/my_ros_ws/src/rt2_assignment1/rosgraph.png)
+
 ## Codes e nodes
 
 In this package, at the scripts folder, it's possible to find 2 '.py' extension files, each one with it's own node:
