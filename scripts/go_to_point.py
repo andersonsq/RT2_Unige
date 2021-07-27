@@ -27,7 +27,11 @@ import rt2_assignment1.msg
 import actionlib
 import actionlib.msg
 import motion_plan.msg
-#
+
+#FOR ASSIGNMENT 2#
+import numpy as np
+from rt2_assignment1.srv import Command, Velocity, VelocityResponse
+
 # robot state variables
 position_ = Point()
 """
@@ -42,16 +46,30 @@ pub_ = None
 # action server
 act_s = None
 
+#FOR ASSIGNMENT2
+# velocity server
+vel_s = None
+
 # parameters for control
 yaw_precision_ = math.pi / 9  # +/- 20 degree allowed
 yaw_precision_2_ = math.pi / 90  # +/- 2 degree allowed
 dist_precision_ = 0.1
 kp_a = -3.0 
 kp_d = 0.2
-ub_a = 0.6
+ub_a = 0.6  #angular speed
 lb_a = -0.5
-ub_d = 0.6
+ub_d = 0.6  #linear speed
 
+#FOR ASSIGNMENT2
+def Vel_srv(req):
+
+    global ub_d = req.linear
+    global ub_a = req.angular
+    
+    rospy.logdebug("Linear: [%f] and Angular:[%f]", req.linear, req.angular)
+    
+    return VelocityResponse()    
+    
 def clbk_odom(msg):
 """
 Odometry callback
@@ -253,12 +271,14 @@ Direct communication with the state machine code, it will run in a loop until th
     	#break
     	
 def main():
-    global pub_, act_s
+    global pub_, act_s, vel_s
     rospy.init_node('go_to_point')
     pub_ = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
     sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
-    #service = rospy.Service('/go_to_point', Position, go_to_point)
     act_s = actionlib.SimpleActionServer('/go_to_point', rt2_assignment1.msg.Assignment1Action, go_to_point)
+    
+    #FOR ASSIGNMENT2    
+    vel_s = rospy.Service('/vel', Velocity, Vel_srv)
     
     act_s.start()    
     

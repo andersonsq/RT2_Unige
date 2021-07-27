@@ -61,6 +61,7 @@ find_package(catkin REQUIRED COMPONENTS
    Command.srv
    Position.srv
    RandomPosition.srv
+   Velocity.srv
  )
 
 ## Generate actions in the 'action' folder
