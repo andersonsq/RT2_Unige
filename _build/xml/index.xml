@@ -25,6 +25,7 @@
     <member refid="namespacego__to__point_1aa2d0ef255bcf5d5faf9ca2764730fb17" kind="variable"><name>state_</name></member>
     <member refid="namespacego__to__point_1a57b4090d0abcbcf0bfa2bcb9329d3036" kind="variable"><name>pub_</name></member>
     <member refid="namespacego__to__point_1a64583fad586a7212c40613ec1c3e7c69" kind="variable"><name>act_s</name></member>
+    <member refid="namespacego__to__point_1a354fba5ca969f353a94d6131040611b9" kind="variable"><name>vel_s</name></member>
     <member refid="namespacego__to__point_1a67f95834f0959feb3facd17bc7fa2b38" kind="variable"><name>yaw_precision_</name></member>
     <member refid="namespacego__to__point_1af74ccf49164d0478ca8343e2031d5813" kind="variable"><name>yaw_precision_2_</name></member>
     <member refid="namespacego__to__point_1a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5" kind="variable"><name>dist_precision_</name></member>
@@ -33,6 +34,7 @@
     <member refid="namespacego__to__point_1acb4e14986fafe5cb73bb8ad0c178869d" kind="variable"><name>ub_a</name></member>
     <member refid="namespacego__to__point_1afecad4058844db05d8321199e25b4498" kind="variable"><name>lb_a</name></member>
     <member refid="namespacego__to__point_1a16c473b9e717200c483d18e66b48152a" kind="variable"><name>ub_d</name></member>
+    <member refid="namespacego__to__point_1a04ffbcfde094b7aa54f3327cf3be2755" kind="function"><name>Vel_srv</name></member>
     <member refid="namespacego__to__point_1a36304a9f313b0579f7fc69fa01695524" kind="function"><name>clbk_odom</name></member>
     <member refid="namespacego__to__point_1a31ee48e5cae36821049b572a96b7c8be" kind="function"><name>change_state</name></member>
     <member refid="namespacego__to__point_1ac688bb56fa84763ea2edefc30cae032a" kind="function"><name>normalize_angle</name></member>

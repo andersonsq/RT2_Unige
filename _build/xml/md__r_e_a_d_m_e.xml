@@ -49,6 +49,8 @@
 </listitem></orderedlist>
 </para>
 <para>Because our user request is implemented as an action, it can be preempted, this way we can stop the robot at any time during the simulation and then restart it with a new goal.</para>
+<para><image type="html" name="rosgraph.png" inline="yes"></image>
+</para>
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md5">
 <title>Codes e nodes</title>

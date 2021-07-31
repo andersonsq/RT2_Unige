@@ -46,6 +46,8 @@
 <codeline></codeline>
 <codeline><highlight class="normal">Because<sp/>our<sp/>user<sp/>request<sp/>is<sp/>implemented<sp/>as<sp/>an<sp/>action,<sp/>it<sp/>can<sp/>be<sp/>preempted,<sp/>this<sp/>way<sp/>we<sp/>can<sp/>stop<sp/>the<sp/>robot<sp/>at<sp/>any<sp/>time<sp/>during<sp/>the<sp/>simulation<sp/>and<sp/>then<sp/>restart<sp/>it<sp/>with<sp/>a<sp/>new<sp/>goal.</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">![](docs/rosgraph.png)</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Codes<sp/>e<sp/>nodes</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">In<sp/>this<sp/>package,<sp/>at<sp/>the<sp/>scripts<sp/>folder,<sp/>it&apos;s<sp/>possible<sp/>to<sp/>find<sp/>2<sp/>&apos;.py&apos;<sp/>extension<sp/>files,<sp/>each<sp/>one<sp/>with<sp/>it&apos;s<sp/>own<sp/>node:</highlight></codeline>
