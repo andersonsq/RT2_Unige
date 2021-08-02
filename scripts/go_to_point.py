@@ -14,7 +14,6 @@
          /cmd_vel the desired robot position
       Service : 
          /go_to_point to start the robot motion.
-         /vel to set the velocity of the robot
       """
 
 import rospy
@@ -63,17 +62,12 @@ ub_d = 0.6  #linear speed
 
 #FOR ASSIGNMENT2
 def Vel_srv(req):
-"""
-Velocity callback
 
-Arguments: VelocityResponse (req)
-
-Description:
-Receives and update the maximum value for both angular and linear speed from the VelocityResponse message
-"""
-
-    global ub_d = req.linear
-    global ub_a = req.angular
+    global ub_d    
+    global ub_a 
+        
+    ub_d = req.linear
+    ub_a = req.angular
     
     rospy.logdebug("Linear: [%f] and Angular:[%f]", req.linear, req.angular)
     

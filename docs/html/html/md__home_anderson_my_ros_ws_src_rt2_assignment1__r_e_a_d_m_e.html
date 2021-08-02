@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: First Assignment of the Research Track 2 course (Robotics Engineering / JEMARO, Unige)</title>
+<title>rt2_assignment2: First Assignment of the Research Track 2 course (Robotics Engineering / JEMARO, Unige)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">rt2_assignment2
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -88,16 +89,16 @@ Requirements</h1>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 General info</h1>
-<p>This package is responsible to control a mobile robot when receives a <code>go_to_point</code> command from the user.</p>
+<p>This package is responsible to control a mobile robot when receives a <code><a class="el" href="namespacego__to__point.html">go_to_point</a></code> command from the user.</p>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Description of the system</h1>
 <p>The launch file will open and start:</p><ol type="1">
 <li>The simulation environment</li>
 <li>The node <code>random_position_server</code>, which implements a random position service</li>
-<li>The node <code>go_to_point</code>, which implements a service to drive a robot toward a point in the environment</li>
+<li>The node <code><a class="el" href="namespacego__to__point.html">go_to_point</a></code>, which implements a service to drive a robot toward a point in the environment</li>
 <li>The node <code>state_machine</code>, which implements a service to start or stop the robot, and calls the other two services to drive the robot</li>
-<li>The node <code>user_interface</code>, which asks the user to start/stop the robot, and calls the service implemented in the state_machine node</li>
-<li>The service implemented in the <code>go_to_point</code> node is able to drive the robot towards a certain position in space (x, y) and with a certain angle (theta)</li>
+<li>The node <code><a class="el" href="namespaceuser__interface.html">user_interface</a></code>, which asks the user to start/stop the robot, and calls the service implemented in the state_machine node</li>
+<li>The service implemented in the <code><a class="el" href="namespacego__to__point.html">go_to_point</a></code> node is able to drive the robot towards a certain position in space (x, y) and with a certain angle (theta)</li>
 <li>The service implemented in the <code>random_position_server</code> node replies with random values for x, y, and theta, where x and y should be limited between some min and max values</li>
 <li>The service implemented in the robot <code>state_machine</code> node gives the possibility to start or stop the robot behaviour.</li>
 </ol>
@@ -107,13 +108,13 @@ Description of the system</h1>
 Codes e nodes</h1>
 <p>In this package, at the scripts folder, it's possible to find 2 '.py' extension files, each one with it's own node:</p>
 <ul>
-<li><b>go_to_point.py:</b> A action server that controls the robot speed depending on random generated goal;</li>
-<li><b>user_interface.py:</b> A command that sends the request to <em>start</em> or <em>stop</em> the <em>go_to_point node</em></li>
+<li><b><a class="el" href="go__to__point_8py.html">go_to_point.py</a>:</b> A action server that controls the robot speed depending on random generated goal;</li>
+<li><b><a class="el" href="user__interface_8py.html">user_interface.py</a>:</b> A command that sends the request to <em>start</em> or <em>stop</em> the <em><a class="el" href="namespacego__to__point.html">go_to_point</a> node</em></li>
 </ul>
 <p>In this package, at the src folder, it's possible to find 2 '.cpp' extension files, each one with it's own node:</p>
 <ul>
-<li><b>position_service.cpp:</b> It generates a random position for x, y and theta when requested.</li>
-<li><b>state_machine.cpp:</b> Send a <em>new</em> goal/objective to the <em>go_to_point</em> actoin server</li>
+<li><b><a class="el" href="position__service_8cpp.html" title="Node random_position_server, which implements a random position service.">position_service.cpp</a>:</b> It generates a random position for x, y and theta when requested.</li>
+<li><b><a class="el" href="state__machine_8cpp.html" title="Implements a service to start or stop the robot, and calls the other two services to drive the robot.">state_machine.cpp</a>:</b> Send a <em>new</em> goal/objective to the <em><a class="el" href="namespacego__to__point.html">go_to_point</a></em> actoin server</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Coppelia scene</h1>
