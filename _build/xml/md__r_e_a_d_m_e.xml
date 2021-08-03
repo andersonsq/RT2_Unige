@@ -33,17 +33,17 @@
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md3">
 <title>General info</title>
-<para>This package is responsible to control a mobile robot when receives a <computeroutput>go_to_point</computeroutput> command from the user.</para>
+<para>This package is responsible to control a mobile robot when receives a <computeroutput><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></computeroutput> command from the user.</para>
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md4">
 <title>Description of the system</title>
 <para>The launch file will open and start:<orderedlist>
 <listitem><para>The simulation environment</para>
 </listitem><listitem><para>The node <computeroutput>random_position_server</computeroutput>, which implements a random position service</para>
-</listitem><listitem><para>The node <computeroutput>go_to_point</computeroutput>, which implements a service to drive a robot toward a point in the environment</para>
+</listitem><listitem><para>The node <computeroutput><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></computeroutput>, which implements a service to drive a robot toward a point in the environment</para>
 </listitem><listitem><para>The node <computeroutput>state_machine</computeroutput>, which implements a service to start or stop the robot, and calls the other two services to drive the robot</para>
-</listitem><listitem><para>The node <computeroutput>user_interface</computeroutput>, which asks the user to start/stop the robot, and calls the service implemented in the state_machine node</para>
-</listitem><listitem><para>The service implemented in the <computeroutput>go_to_point</computeroutput> node is able to drive the robot towards a certain position in space (x, y) and with a certain angle (theta)</para>
+</listitem><listitem><para>The node <computeroutput><ref refid="namespaceuser__interface" kindref="compound">user_interface</ref></computeroutput>, which asks the user to start/stop the robot, and calls the service implemented in the state_machine node</para>
+</listitem><listitem><para>The service implemented in the <computeroutput><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></computeroutput> node is able to drive the robot towards a certain position in space (x, y) and with a certain angle (theta)</para>
 </listitem><listitem><para>The service implemented in the <computeroutput>random_position_server</computeroutput> node replies with random values for x, y, and theta, where x and y should be limited between some min and max values</para>
 </listitem><listitem><para>The service implemented in the robot <computeroutput>state_machine</computeroutput> node gives the possibility to start or stop the robot behaviour.</para>
 </listitem></orderedlist>
@@ -56,14 +56,14 @@
 <title>Codes e nodes</title>
 <para>In this package, at the scripts folder, it&apos;s possible to find 2 &apos;.py&apos; extension files, each one with it&apos;s own node:</para>
 <para><itemizedlist>
-<listitem><para><bold><ref refid="go__to__point_8py" kindref="compound">go_to_point.py</ref>:</bold> A action server that controls the robot speed depending on random generated goal;</para>
-</listitem><listitem><para><bold><ref refid="user__interface_8py" kindref="compound">user_interface.py</ref>:</bold> A command that sends the request to <emphasis>start</emphasis> or <emphasis>stop</emphasis> the <emphasis>go_to_point node</emphasis></para>
+<listitem><para><bold>go_to_point.py:</bold> A action server that controls the robot speed depending on random generated goal;</para>
+</listitem><listitem><para><bold>user_interface.py:</bold> A command that sends the request to <emphasis>start</emphasis> or <emphasis>stop</emphasis> the <emphasis><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref> node</emphasis></para>
 </listitem></itemizedlist>
 </para>
 <para>In this package, at the src folder, it&apos;s possible to find 2 &apos;.cpp&apos; extension files, each one with it&apos;s own node:</para>
 <para><itemizedlist>
 <listitem><para><bold><ref refid="position__service_8cpp" kindref="compound">position_service.cpp</ref>:</bold> It generates a random position for x, y and theta when requested.</para>
-</listitem><listitem><para><bold><ref refid="state__machine_8cpp" kindref="compound">state_machine.cpp</ref>:</bold> Send a <emphasis>new</emphasis> goal/objective to the <emphasis>go_to_point</emphasis> actoin server</para>
+</listitem><listitem><para><bold><ref refid="state__machine_8cpp" kindref="compound">state_machine.cpp</ref>:</bold> Send a <emphasis>new</emphasis> goal/objective to the <emphasis><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></emphasis> actoin server</para>
 </listitem></itemizedlist>
 </para>
 </sect1>

@@ -21,10 +21,10 @@ subprocess.call('doxygen Doxyfile.in', shell=True)
 
 project = 'rt2_assignment1'
 copyright = '2021, Anderson'
-author = 'Anderson'
+author = 'Anderson Siqueira'
 
 # The full version, including alpha/beta/rc tags
-release = '13/07/2021'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -33,18 +33,18 @@ release = '13/07/2021'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-'sphinx.ext.autodoc',
-'sphinx.ext.doctest',
-'sphinx.ext.intersphinx',
-'sphinx.ext.todo',
-'sphinx.ext.coverage',	
-'sphinx.ext.mathjax',
-'sphinx.ext.ifconfig',
-'sphinx.ext.viewcode',
-'sphinx.ext.githubpages',
-"sphinx.ext.napoleon",
-'sphinx.ext.inheritance_diagram',
-'breathe'
+  'sphinx.ext.autodoc',
+  'sphinx.ext.doctest',
+  'sphinx.ext.intersphinx',
+  'sphinx.ext.todo',
+  'sphinx.ext.coverage',	
+  'sphinx.ext.mathjax',
+  'sphinx.ext.ifconfig',
+  'sphinx.ext.viewcode',
+  'sphinx.ext.githubpages',
+  "sphinx.ext.napoleon",
+  'sphinx.ext.inheritance_diagram',
+  'breathe'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -80,7 +80,8 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # --Options for todo extension ----------------------------------------------
 
-# If true, `todo` and `todoList` produce output, else they produce nothing.todo_include_todos = True
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
 
 # --Options for breathe
 

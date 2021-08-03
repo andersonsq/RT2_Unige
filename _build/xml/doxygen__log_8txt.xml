@@ -29,10 +29,10 @@
 <codeline lineno="20"><highlight class="normal">Preprocessing<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/CMakeLists.txt...</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/CMakeLists.txt...</highlight></codeline>
 <codeline lineno="22"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/README.md...</highlight></codeline>
-<codeline lineno="23"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py...</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py...</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="state__machine_8cpp_1a1a9543636935547580c0657f4c7c0c2b" kindref="member">user_interface</ref>.py...</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="state__machine_8cpp_1a1a9543636935547580c0657f4c7c0c2b" kindref="member">user_interface</ref>.py...</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespacego__to__point" kindref="compound">go_to_point</ref>.py...</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespacego__to__point" kindref="compound">go_to_point</ref>.py...</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespaceuser__interface" kindref="compound">user_interface</ref>.py...</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespaceuser__interface" kindref="compound">user_interface</ref>.py...</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">Preprocessing<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src/position_service.cpp...</highlight></codeline>
 <codeline lineno="28"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src/position_service.cpp...</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">Preprocessing<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src/state_machine.cpp...</highlight></codeline>
@@ -94,8 +94,8 @@
 <codeline lineno="85"><highlight class="normal">Generating<sp/>file<sp/>documentation...</highlight></codeline>
 <codeline lineno="86"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>CMakeLists.txt...</highlight></codeline>
 <codeline lineno="87"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>README.md...</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>scripts/go_to_point.py...</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>scripts/<ref refid="state__machine_8cpp_1a1a9543636935547580c0657f4c7c0c2b" kindref="member">user_interface</ref>.py...</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>scripts/<ref refid="namespacego__to__point" kindref="compound">go_to_point</ref>.py...</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>scripts/<ref refid="namespaceuser__interface" kindref="compound">user_interface</ref>.py...</highlight></codeline>
 <codeline lineno="90"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>src/position_service.cpp...</highlight></codeline>
 <codeline lineno="91"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>src/state_machine.cpp...</highlight></codeline>
 <codeline lineno="92"><highlight class="normal">Generating<sp/>page<sp/>documentation...</highlight></codeline>
@@ -103,8 +103,8 @@
 <codeline lineno="94"><highlight class="normal">Generating<sp/>group<sp/>documentation...</highlight></codeline>
 <codeline lineno="95"><highlight class="normal">Generating<sp/>class<sp/>documentation...</highlight></codeline>
 <codeline lineno="96"><highlight class="normal">Generating<sp/>namespace<sp/>index...</highlight></codeline>
-<codeline lineno="97"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>namespace<sp/>go_to_point</highlight></codeline>
-<codeline lineno="98"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>namespace<sp/><ref refid="state__machine_8cpp_1a1a9543636935547580c0657f4c7c0c2b" kindref="member">user_interface</ref></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>namespace<sp/><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>namespace<sp/><ref refid="namespaceuser__interface" kindref="compound">user_interface</ref></highlight></codeline>
 <codeline lineno="99"><highlight class="normal">Generating<sp/>graph<sp/>info<sp/>page...</highlight></codeline>
 <codeline lineno="100"><highlight class="normal">Generating<sp/>directory<sp/>documentation...</highlight></codeline>
 <codeline lineno="101"><highlight class="normal">Generating<sp/>index<sp/>page...</highlight></codeline>

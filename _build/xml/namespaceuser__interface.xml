@@ -2,54 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="namespaceuser__interface" kind="namespace" language="Python">
     <compoundname>user_interface</compoundname>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="user__interface_8py_1a74abdf5fb275d0e26edfd7dd1c1698a2" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>user_interface.ui_client</definition>
-        <argsstring></argsstring>
-        <name>ui_client</name>
-        <initializer>=  rospy.ServiceProxy(&apos;/<ref refid="state__machine_8cpp_1a1a9543636935547580c0657f4c7c0c2b" kindref="member">user_interface</ref>&apos;, Command)</initializer>
-        <briefdescription>
-<para>This function initializes the ROS node and waits for the user to insert <emphasis>start</emphasis> or <emphasis>stop</emphasis> to control the robot, by relying on the &apos;rospy <ulink url="http://wiki.ros.org/rospy/">http://wiki.ros.org/rospy/</ulink>&apos;_ module. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>The user message is passed to the service <computeroutput>user_interface</computeroutput>, advertised by :mod:<computeroutput>go_to_point</computeroutput>. </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="scripts/user_interface.py" line="31" column="1" bodyfile="scripts/user_interface.py" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="user__interface_8py_1ac078be233beb6493b6069df650af0fc4" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>user_interface.rate</definition>
-        <argsstring></argsstring>
-        <name>rate</name>
-        <initializer>=  rospy.Rate(20)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="scripts/user_interface.py" line="33" column="1" bodyfile="scripts/user_interface.py" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="user__interface_8py_1a056c9b8f69caa9776c573dbb14434cd1" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>user_interface.x</definition>
-        <argsstring></argsstring>
-        <name>x</name>
-        <initializer>=  int(input(&quot;\nPress 1 to start the robot &quot;))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="scripts/user_interface.py" line="34" column="1" bodyfile="scripts/user_interface.py" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="user__interface_8py_1ac26bdb296b6776907b72c17ce5a1b24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceuser__interface_1ac26bdb296b6776907b72c17ce5a1b24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def user_interface.main</definition>
         <argsstring>()</argsstring>
@@ -57,15 +11,32 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>This function initializes the ROS node and waits for the user to insert *start* or *stop* to control the robot, by relying on the &apos;rospy &lt;http://wiki.ros.org/rospy/&gt;&apos;_ module.
+
+The user message is passed to the service 
+``user_interface``, 
+advertised by :mod:`go_to_point`.
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/user_interface.py" line="20" column="1" bodyfile="scripts/user_interface.py" bodystart="20" bodyend="21"/>
+        <location file="scripts/user_interface.py" line="20" column="1" bodyfile="scripts/user_interface.py" bodystart="20" bodyend="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para><verbatim>.. module:: user_interface
+:platform: Unix:
+synopsis: Python module for the user Interface
+
+.. author:: Anderson Siqueira 
+  
+This node implements an user interface
+  
+Service:
+  /user_interface    
+</verbatim> </para>
     </detaileddescription>
     <location file="scripts/user_interface.py" line="1" column="1"/>
   </compounddef>
