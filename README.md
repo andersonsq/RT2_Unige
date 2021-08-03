@@ -37,7 +37,7 @@ The launch file will open and start:
 
 Because our user request is implemented as an action, it can be preempted, this way we can stop the robot at any time during the simulation and then restart it with a new goal.
 
-![](docs/rosgraph.png)
+![](docs/rosgraph_jupyter.png)
 
 ## Codes e nodes
 
