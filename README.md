@@ -17,7 +17,8 @@ To properly oberserve and run correctly the behaviour of the mobile robot in you
 - ROS Noetic
 - ROS2 Foxy
 - Python3
-- Gazebo 
+- Gazebo
+- Jupyter notebook 
 
 ## General info
 
@@ -30,7 +31,7 @@ The launch file will open and start:
 2. The node `random_position_server`, which implements a random position service
 3. The node `go_to_point`, which implements a service to drive a robot toward a point in the environment
 4. The node `state_machine`, which implements a service to start or stop the robot, and calls the other two services to drive the robot
-5. The node `user_interface`, which asks the user to start/stop the robot, and calls the service implemented in the state_machine node
+5. The node `jupyter_user_interface`, which asks the user to start/stop the robot, and calls the service implemented in the state_machine node
 6. The service implemented in the `go_to_point` node is able to drive the robot towards a certain position in space (x, y) and with a certain angle (theta)
 7. The service implemented in the `random_position_server` node replies with random values for x, y, and theta, where x and y should be limited between some min and max values
 8. The service implemented in the robot `state_machine` node gives the possibility to start or stop the robot behaviour.
@@ -44,7 +45,7 @@ Because our user request is implemented as an action, it can be preempted, this 
 In this package, at the scripts folder, it's possible to find 2 '.py' extension files, each one with it's own node:
 
 - **go_to_point.py:** A action server that controls the robot speed depending on random generated goal;
-- **user_interface.py:** A command that sends the request to *start* or *stop* the *go_to_point node*
+- **jupyter_user_interface.py:** A node that sends the request to *start* or *stop* the *go_to_point node*
 
 In this package, at the src folder, it's possible to find 2 '.cpp' extension files, each one with it's own node:
 
@@ -60,6 +61,8 @@ In this package, at the src folder, it's possible to find 2 '.cpp' extension fil
 To compile, first it is necessary to source your ROS version.
 ```
 source ros.sh
+roscore &
+jupyter notebook --allow-root --ip 0.0.0.0
 ```
 
 ### Launching the UDF mobile robot
