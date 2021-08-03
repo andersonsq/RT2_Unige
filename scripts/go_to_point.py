@@ -1,20 +1,22 @@
 #! /usr/bin/env python
 
-""".. module:: go_to_point
-      :platform: Unix
-      :synopsis: Python module for piloting the robot to the target
-      
-      .. moduleauthor:: Anderson Siqueira
-      
-      ROS node for driving a robot to a specific point
-      
-      Subscribes to: 
-         /odom topic where the simulator publishes the robot position
-      Publishes to: 
-         /cmd_vel the desired robot position
-      Service : 
-         /go_to_point to start the robot motion.
-      """
+##      @package rt2_assignment1
+#       \file go_to_point.py
+#       \brief Python module for piloting the robot to the target
+#       \author Anderson Siqueira de Andrade
+#       \version 1.0
+#       \date 03/08/2021
+# 
+#      \details
+#
+#      Servers: 
+#         Action: <BR>
+#             /go_to_point (rt2_assignment1.action.Assignment1Action)
+#         Service: <BR>
+#             /vel (rt2_assignment1.srv.Velocity)
+#      Publishes to: <BR>
+#         /cmd_vel (geometry_msgs.msg.Twist)
+##     
 
 import rospy
 from geometry_msgs.msg import Twist, Point
@@ -34,9 +36,9 @@ from rt2_assignment1.srv import Command, Velocity, VelocityResponse
 
 # robot state variables
 position_ = Point()
-"""
-Point: actual robot position
-"""
+##
+# Point: actual robot position
+##
 
 yaw_ = 0
 position_ = 0
@@ -74,14 +76,14 @@ def Vel_srv(req):
     return VelocityResponse()    
     
 def clbk_odom(msg):
-"""
-Odometry callback
-
-Arguments: Odometry message (msg)
-
-Description:
-Receives from Odometry message the values of X, Y and theta
-"""
+##  
+#    Odometry callback
+#
+#    Arguments: Odometry message (msg)
+#    
+#    Description:
+#    Receives from Odometry message the values of X, Y and theta
+##    
 
     global position_
     global yaw_
@@ -100,12 +102,12 @@ Receives from Odometry message the values of X, Y and theta
 
 
 def change_state(state):
-"""
-Arguments: state (int)
-
-Description:
-Update the global state
-"""
+##   
+#    Arguments: state (int)
+#    
+#    Description:
+#    Update the global state
+##    
 
     global state_
     state_ = state
@@ -113,27 +115,27 @@ Update the global state
 
 
 def normalize_angle(angle):
-"""
-Arguments: float (angle) -> input
-                   float (angle) -> return		
-
-Description:
-Normalize the angle between pi and -pi
-"""
+##   
+#    Arguments: float (angle) -> input
+#                       float (angle) -> return		
+#   
+#    Description:
+#    Normalize the angle between pi and -pi
+##   
 
     if(math.fabs(angle) > math.pi):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
 
 def fix_yaw(des_pos):
-"""
-Arguments: float (des_yaw)
-               int (next_state)
-          
-Description: 
-Orient the robot in direction of goal position (x,y) or achieve it.
-It can also change to a new state depending of the actual orientation.	
-"""
+##   
+#    Arguments: float (des_yaw)
+#                   int (next_state)
+#              
+#    Description: 
+#    Orient the robot in direction of goal position (x,y) or achieve it.
+#    It can also change to a new state depending of the actual orientation.	
+##    
 
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = normalize_angle(desired_yaw - yaw_)
@@ -153,13 +155,13 @@ It can also change to a new state depending of the actual orientation.
 
 
 def go_straight_ahead(des_pos):
-"""
-Arguments: point (des_pos)
-                   position (desired_) for x, y
-
-Description:           
-Set both angular and linear speed depending on the distance between the robot the goal
-"""
+##   
+#    Arguments: point (des_pos)
+#                       position (desired_) for x, y
+#    
+#    Description:           
+#    Set both angular and linear speed depending on the distance between the robot the goal
+##    
 
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = desired_yaw - yaw_
@@ -202,10 +204,10 @@ def fix_final_yaw(des_yaw):
         change_state(3)
         
 def done():
-"""
-Description:
-Stop the robot setting both angular and linear velocity to 0
-"""
+##   
+#    Description:
+#    Stop the robot setting both angular and linear velocity to 0
+##   
 
     twist_msg = Twist()
     twist_msg.linear.x = 0
@@ -213,13 +215,13 @@ Stop the robot setting both angular and linear velocity to 0
     pub_.publish(twist_msg)
     
 def go_to_point(goal):		##Action goal
-"""
-Arguments: goal position (goal) for x, y and theta
-
-Description:
-Set an action deppending on the robot actual state. 
-Direct communication with the state machine code, it will run in a loop until the user cancel/preempt the action
-"""
+##   
+#    Arguments: goal position (goal) for x, y and theta
+#    
+#    Description:
+#    Set an action deppending on the robot actual state. 
+#    Direct communication with the state machine code, it will run in a loop until the user cancel/preempt the action
+##   
 
     global act_s
 		

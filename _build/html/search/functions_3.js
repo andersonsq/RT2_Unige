@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['go_5fstraight_5fahead_24',['go_straight_ahead',['../namespacego__to__point.html#ac8579665c0fbf665f734476554fac37d',1,'go_to_point']]],
-  ['go_5fto_5fpoint_25',['go_to_point',['../namespacego__to__point.html#a2203d17b7e563bee20ed4c988548df45',1,'go_to_point']]]
+  ['user_5finterface_26',['user_interface',['../state__machine_8cpp.html#a1a9543636935547580c0657f4c7c0c2b',1,'state_machine.cpp']]]
 ];
