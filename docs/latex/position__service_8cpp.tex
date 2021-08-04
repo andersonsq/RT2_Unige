@@ -1,5 +1,10 @@
-\hypertarget{position__service_8cpp}{}\doxysection{src/position\+\_\+service.cpp File Reference}
-\label{position__service_8cpp}\index{src/position\_service.cpp@{src/position\_service.cpp}}
+\hypertarget{position__service_8cpp}{}\doxysection{/home/anderson/my\+\_\+ros\+\_\+ws/src/rt2\+\_\+assignment1/src/position\+\_\+service.cpp File Reference}
+\label{position__service_8cpp}\index{/home/anderson/my\_ros\_ws/src/rt2\_assignment1/src/position\_service.cpp@{/home/anderson/my\_ros\_ws/src/rt2\_assignment1/src/position\_service.cpp}}
+
+
+Node random\+\_\+position\+\_\+server, which implements a random position service.  
+
+
 {\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Random\+Position.\+h\char`\"{}}\newline
 Include dependency graph for position\+\_\+service.\+cpp\+:
@@ -21,6 +26,20 @@ int \mbox{\hyperlink{position__service_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{m
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Node random\+\_\+position\+\_\+server, which implements a random position service. 
+
+\begin{DoxyAuthor}{Author}
+Anderson Siqueira 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/07/2021 
+\end{DoxyDate}
+
+
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{position__service_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{position__service_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
 \index{position\_service.cpp@{position\_service.cpp}!main@{main}}
@@ -28,15 +47,33 @@ int \mbox{\hyperlink{position__service_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{m
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{position__service_8cpp_ab65b9ff5368189ad34fe4989d50742e4}\label{position__service_8cpp_ab65b9ff5368189ad34fe4989d50742e4}} 
+Description\+: Server that generates our random positions in our \char`\"{}/position\+\_\+server\char`\"{} service \mbox{\Hypertarget{position__service_8cpp_ab65b9ff5368189ad34fe4989d50742e4}\label{position__service_8cpp_ab65b9ff5368189ad34fe4989d50742e4}} 
 \index{position\_service.cpp@{position\_service.cpp}!myrandom@{myrandom}}
 \index{myrandom@{myrandom}!position\_service.cpp@{position\_service.cpp}}
 \doxysubsubsection{\texorpdfstring{myrandom()}{myrandom()}}
 {\footnotesize\ttfamily bool myrandom (\begin{DoxyParamCaption}\item[{rt2\+\_\+assignment1\+::\+Random\+Position\+::\+Request \&}]{req,  }\item[{rt2\+\_\+assignment1\+::\+Random\+Position\+::\+Response \&}]{res }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{position__service_8cpp_a10f83119b77a8fbd085a5550955f85ff}\label{position__service_8cpp_a10f83119b77a8fbd085a5550955f85ff}} 
+
+\begin{DoxyParams}{Parameters}
+{\em req} & Service Request with x and y value range \\
+\hline
+{\em res} & Service Response with x, y and theta values\\
+\hline
+\end{DoxyParams}
+Description\+: Service callback bool (myrandom) that generates random values for my x, y and theta positions. \mbox{\Hypertarget{position__service_8cpp_a10f83119b77a8fbd085a5550955f85ff}\label{position__service_8cpp_a10f83119b77a8fbd085a5550955f85ff}} 
 \index{position\_service.cpp@{position\_service.cpp}!randMToN@{randMToN}}
 \index{randMToN@{randMToN}!position\_service.cpp@{position\_service.cpp}}
 \doxysubsubsection{\texorpdfstring{randMToN()}{randMToN()}}
 {\footnotesize\ttfamily double rand\+M\+ToN (\begin{DoxyParamCaption}\item[{double}]{M,  }\item[{double}]{N }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em double} & (M) \\
+\hline
+{\em double} & (N)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double (rand\+M\+ToN)
+\end{DoxyReturn}
+Description\+: Generate a random number between M and N 

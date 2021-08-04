@@ -1,5 +1,10 @@
-\hypertarget{state__machine_8cpp}{}\doxysection{src/state\+\_\+machine.cpp File Reference}
-\label{state__machine_8cpp}\index{src/state\_machine.cpp@{src/state\_machine.cpp}}
+\hypertarget{state__machine_8cpp}{}\doxysection{/home/anderson/my\+\_\+ros\+\_\+ws/src/rt2\+\_\+assignment1/src/state\+\_\+machine.cpp File Reference}
+\label{state__machine_8cpp}\index{/home/anderson/my\_ros\_ws/src/rt2\_assignment1/src/state\_machine.cpp@{/home/anderson/my\_ros\_ws/src/rt2\_assignment1/src/state\_machine.cpp}}
+
+
+Implements a service to start or stop the robot, and calls the other two services to drive the robot.  
+
+
 {\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Command.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Position.\+h\char`\"{}}\newline
@@ -33,6 +38,20 @@ int \mbox{\hyperlink{state__machine_8cpp_a849fa981f121eb25a67e4e14392840ba}{opti
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Implements a service to start or stop the robot, and calls the other two services to drive the robot. 
+
+\begin{DoxyAuthor}{Author}
+Anderson Siqueira 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/07/2021 
+\end{DoxyDate}
+
+
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
 \index{state\_machine.cpp@{state\_machine.cpp}!main@{main}}
@@ -46,12 +65,27 @@ int \mbox{\hyperlink{state__machine_8cpp_a849fa981f121eb25a67e4e14392840ba}{opti
 \doxysubsubsection{\texorpdfstring{simple\_done\_callback()}{simple\_done\_callback()}}
 {\footnotesize\ttfamily void simple\+\_\+done\+\_\+callback (\begin{DoxyParamCaption}\item[{const actionlib\+::\+Simple\+Client\+Goal\+State \&}]{get\+\_\+state,  }\item[{const rt2\+\_\+assignment1\+::\+Assignment1\+Result\+Const\+Ptr \&}]{result }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}\label{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}} 
+
+\begin{DoxyParams}{Parameters}
+{\em goal\+\_\+state} & Reached goal \\
+\hline
+{\em result} & Result of the action\\
+\hline
+\end{DoxyParams}
+Description\+: Callback that is activated when the goal of the action is reached \mbox{\Hypertarget{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}\label{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}} 
 \index{state\_machine.cpp@{state\_machine.cpp}!user\_interface@{user\_interface}}
 \index{user\_interface@{user\_interface}!state\_machine.cpp@{state\_machine.cpp}}
 \doxysubsubsection{\texorpdfstring{user\_interface()}{user\_interface()}}
 {\footnotesize\ttfamily bool user\+\_\+interface (\begin{DoxyParamCaption}\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Request \&}]{req,  }\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Response \&}]{res }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em req} & Service Request with command (string) \\
+\hline
+{\em res} & Service Response with the value of the bool (start) Description\+: Service callback to set the start and stop arguments state ~\newline
+ \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Variable Documentation}

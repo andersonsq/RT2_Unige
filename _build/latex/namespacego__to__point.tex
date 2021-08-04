@@ -3,8 +3,7 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{namespacego__to__point_a04ffbcfde094b7aa54f3327cf3be2755}\label{namespacego__to__point_a04ffbcfde094b7aa54f3327cf3be2755}} 
-def {\bfseries Vel\+\_\+srv} (req)
+def \mbox{\hyperlink{namespacego__to__point_a04ffbcfde094b7aa54f3327cf3be2755}{Vel\+\_\+srv}} (req)
 \item 
 def \mbox{\hyperlink{namespacego__to__point_a36304a9f313b0579f7fc69fa01695524}{clbk\+\_\+odom}} (msg)
 \item 
@@ -75,20 +74,19 @@ float {\bfseries ub\+\_\+d} = 0.\+6
 
 \doxysubsection{Detailed Description}
 \begin{DoxyVerb}.. module:: go_to_point
-:platform: Unix
-:synopsis: Python module for piloting the robot to the target
-
+    :platform: Unix
+    :synopsis: Python module for piloting the robot to the target
 .. moduleauthor:: Anderson Siqueira
-
-ROS node for driving a robot to a specific point
-
+    
+    ROS node for driving a robot to a specific point
+    
 Subscribes to: 
-   /odom (topic where the simulator publishes the robot position)
+    /odom (topic where the simulator publishes the robot position)
 Publishes to: 
-   /cmd_vel (the desired robot position)
+    /cmd_vel (the desired robot position)
 Service : 
-   /go_to_point (to start the robot motion)
-   /vel (requested by our jupyter notebook)
+    /go_to_point (to start the robot motion)
+    /vel (requested by our jupyter notebook)
 \end{DoxyVerb}
  
 
@@ -100,7 +98,7 @@ Service :
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+change\+\_\+state (\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}Arguments: state (int)
-
+          
 Description:
 Update the global state
 \end{DoxyVerb}
@@ -112,7 +110,7 @@ Update the global state
 
 \begin{DoxyVerb}Odometry callback
 Arguments: Odometry message (msg)
-
+      
 Description:
 Receives from Odometry message the values of X, Y and theta
 \end{DoxyVerb}
@@ -134,8 +132,8 @@ Stop the robot setting both angular and linear velocity to 0
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+fix\+\_\+yaw (\begin{DoxyParamCaption}\item[{}]{des\+\_\+pos }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}Arguments: float (des_yaw)
-           int (next_state)
-           
+int (next_state)
+                 
 Description:
 Orient the robot in direction of goal position (x,y) or achieve it. 
 It can also change to a new state depending of the actual orientation. 
@@ -147,8 +145,8 @@ It can also change to a new state depending of the actual orientation.
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+go\+\_\+straight\+\_\+ahead (\begin{DoxyParamCaption}\item[{}]{des\+\_\+pos }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}Arguments: point (des_pos)
-           position (desired_) for x, y 
-           
+position (desired_) for x, y
+
 Description:
 Set both angular and linear speed depending on the distance between the robot the goal
 \end{DoxyVerb}
@@ -172,9 +170,22 @@ Direct communication with the state machine code, it will run in a loop until th
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+normalize\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}Arguments: float (angle) -> input
-           float (angle) -> return
-           
+float (angle) -> return
+                 
 Description:
 Normalize the angle between pi and -pi
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacego__to__point_a04ffbcfde094b7aa54f3327cf3be2755}\label{namespacego__to__point_a04ffbcfde094b7aa54f3327cf3be2755}} 
+\index{go\_to\_point@{go\_to\_point}!Vel\_srv@{Vel\_srv}}
+\index{Vel\_srv@{Vel\_srv}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{Vel\_srv()}{Vel\_srv()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+Vel\+\_\+srv (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Arguments: Velocity message (req)
+
+/vel server
+      
+Description:
+Receives from Velocity.srv the maximun values for angular and linear velocities
 \end{DoxyVerb}
  

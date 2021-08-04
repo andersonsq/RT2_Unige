@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['position_5f_19',['position_',['../namespacego__to__point.html#a91dbaab25e6080f6b5dbf82cac6ce75c',1,'go_to_point']]],
-  ['position_5fservice_2ecpp_20',['position_service.cpp',['../position__service_8cpp.html',1,'']]],
-  ['pub_5f_21',['pub_',['../namespacego__to__point.html#a57b4090d0abcbcf0bfa2bcb9329d3036',1,'go_to_point']]]
+  ['kp_5fa_29',['kp_a',['../namespacego__to__point.html#a524106fc7667a0927951dfd89d52d6a7',1,'go_to_point']]],
+  ['kp_5fd_30',['kp_d',['../namespacego__to__point.html#a7bc498652ca66932e704e738b50c297b',1,'go_to_point']]]
 ];

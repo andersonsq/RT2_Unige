@@ -1,32 +1,31 @@
 #! /usr/bin/env python
 
-      """
-      .. module:: user_interface
-      :platform: Unix:
-      synopsis: Python module for the user Interface
-      
-      .. author:: Anderson Siqueira 
+"""
+    .. module:: user_interface
+       :platform: Unix
+       :synopsis: Python module for the user Interface    
+    .. moduleauthor:: Anderson Siqueira 
         
-      This node implements an user interface
+    This node implements an user interface
   
-      Service:
-        /user_interface    
-      """
+    Service:
+       /user_interface    
+"""
 
 import rospy
 import time
 from rt2_assignment1.srv import Command
 
 def main():
-
-      """
-      This function initializes the ROS node and waits for the user to insert *start* or *stop* to control the robot, by relying on the 'rospy <http://wiki.ros.org/rospy/>'_ module.
-      
-      The user message is passed to the service 
-      ``user_interface``, 
-      advertised by :mod:`go_to_point`.
-      """
-
+    
+    """
+    This function initializes the ROS node and waits for the user to insert *start* or *stop* to control the robot, by relying on the 'rospy <http://wiki.ros.org/rospy/>'_ module.
+    
+    The user message is passed to the service 
+    ``user_interface``, 
+    advertised by :mod:`go_to_point`.
+    """
+    
     rospy.init_node('user_interface')
     ui_client = rospy.ServiceProxy('/user_interface', Command)
     time.sleep(10)

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['options_61',['options',['../state__machine_8cpp.html#a849fa981f121eb25a67e4e14392840ba',1,'state_machine.cpp']]]
+  ['exclude_5fpatterns_94',['exclude_patterns',['../namespaceconf.html#a7ad48fb6f3e9b129c02346ea0d3527c1',1,'conf']]],
+  ['extensions_95',['extensions',['../namespaceconf.html#ae475e080536acb271a0a0efe56c3ba42',1,'conf']]]
 ];

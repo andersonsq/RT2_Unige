@@ -93,8 +93,8 @@
 <li><a class="reference internal" href="#rt2-assignment1-s-documentation">Rt2_assignment1’s documentation!</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#user-interface-module">User Interface Module</a></li>
-<li><a class="reference internal" href="#gotopoint-module">GoToPoint Module</a></li>
+<li><a class="reference internal" href="#module-scripts.user_interface">User Interface Module</a></li>
+<li><a class="reference internal" href="#module-scripts.go_to_point">GoToPoint Module</a></li>
 <li><a class="reference internal" href="#position-service">Position Service</a></li>
 </ul>
 </div>
@@ -180,11 +180,115 @@
 <p>This is the documentation of the RT2_assignment package!</p>
 </div>
 </div>
-<div class="section" id="user-interface-module">
-<h1>User Interface Module<a class="headerlink" href="#user-interface-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-scripts.user_interface">
+<span id="user-interface-module"></span><h1>User Interface Module<a class="headerlink" href="#module-scripts.user_interface" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-user_interface"></span><p>This node implements an user interface</p>
+<dl class="simple">
+<dt>Service:</dt><dd><p>/user_interface</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.user_interface.main">
+<span class="sig-prename descclassname"><span class="pre">scripts.user_interface.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/user_interface.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.user_interface.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function initializes the ROS node and waits for the user to insert <em>start</em> or <em>stop</em> to control the robot, by relying on the ‘rospy &lt;<a class="reference external" href="http://wiki.ros.org/rospy/">http://wiki.ros.org/rospy/</a>&gt;’_ module.</p>
+<p>The user message is passed to the service
+<code class="docutils literal notranslate"><span class="pre">user_interface</span></code>,
+advertised by <a class="reference internal" href="#module-go_to_point" title="go_to_point: Python module for piloting the robot to the target (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">go_to_point</span></code></a>.</p>
+</dd></dl>
+
 </div>
-<div class="section" id="gotopoint-module">
-<h1>GoToPoint Module<a class="headerlink" href="#gotopoint-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-scripts.go_to_point">
+<span id="gotopoint-module"></span><h1>GoToPoint Module<a class="headerlink" href="#module-scripts.go_to_point" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-go_to_point"></span><dl class="simple">
+<dt>Subscribes to:</dt><dd><p>/odom (topic where the simulator publishes the robot position)</p>
+</dd>
+<dt>Publishes to:</dt><dd><p>/cmd_vel (the desired robot position)</p>
+</dd>
+<dt>Service :</dt><dd><p>/go_to_point (to start the robot motion)
+/vel (requested by our jupyter notebook)</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.Vel_srv">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">Vel_srv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#Vel_srv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.Vel_srv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments: Velocity message (req)</p>
+<p>/vel server</p>
+<p>Description:
+Receives from Velocity.srv the maximun values for angular and linear velocities</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.change_state">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">change_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#change_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.change_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments: state (int)</p>
+<p>Description:
+Update the global state</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.clbk_odom">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">clbk_odom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#clbk_odom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.clbk_odom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Odometry callback
+Arguments: Odometry message (msg)</p>
+<p>Description:
+Receives from Odometry message the values of X, Y and theta</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.done">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#done"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description:
+Stop the robot setting both angular and linear velocity to 0</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.fix_yaw">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">fix_yaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#fix_yaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.fix_yaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments: float (des_yaw)
+int (next_state)</p>
+<p>Description:
+Orient the robot in direction of goal position (x,y) or achieve it.
+It can also change to a new state depending of the actual orientation.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.go_straight_ahead">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">go_straight_ahead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#go_straight_ahead"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.go_straight_ahead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments: point (des_pos)
+position (<a href="#id1"><span class="problematic" id="id2">desired_</span></a>) for x, y</p>
+<p>Description:
+Set both angular and linear speed depending on the distance between the robot the goal</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.go_to_point">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">go_to_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goal</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#go_to_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.go_to_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments: goal position (goal) for x, y and theta</p>
+<p>Description:
+Set an action deppending on the robot actual state.
+Direct communication with the state machine code, it will run in a loop until the user cancel/preempt the action</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point.normalize_angle">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">normalize_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#normalize_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.normalize_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments: float (angle) -&gt; input
+float (angle) -&gt; return</p>
+<p>Description:
+Normalize the angle between pi and -pi</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="scripts.go_to_point.position_">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">position_</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#scripts.go_to_point.position_" title="Permalink to this definition">¶</a></dt>
+<dd><p>actual robot position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Point</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="position-service">
 <h1>Position Service<a class="headerlink" href="#position-service" title="Permalink to this headline">¶</a></h1>

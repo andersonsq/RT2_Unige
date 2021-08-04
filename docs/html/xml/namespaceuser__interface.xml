@@ -11,11 +11,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>   This function initializes the ROS node and waits for the user to insert *start* or *stop* to control the robot, by relying on the &apos;rospy &lt;http://wiki.ros.org/rospy/&gt;&apos;_ module.
-   
-   The user message is passed to the service 
- ``user_interface``, 
-   advertised by :mod:`go_to_point`.
+<para><verbatim>This function initializes the ROS node and waits for the user to insert *start* or *stop* to control the robot, by relying on the &apos;rospy &lt;http://wiki.ros.org/rospy/&gt;&apos;_ module.
+
+The user message is passed to the service 
+``user_interface``, 
+advertised by :mod:`go_to_point`.
 </verbatim> </para>
         </detaileddescription>
         <inbodydescription>
@@ -27,15 +27,16 @@
     </briefdescription>
     <detaileddescription>
 <para><verbatim>.. module:: user_interface
-  :platform: Unix:
-  synopsis: Python module for the user Interface
-  
-  .. author:: Anderson Siqueira 
+   :platform: Unix
+   :synopsis: Python module for the user Interface
 
-  This node implements an user interface
+.. author:: Anderson Siqueira 
+    
+This node implements an user interface
   
-  Service:
-/user_interface    </verbatim> </para>
+Service:
+   /user_interface    
+</verbatim> </para>
     </detaileddescription>
     <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/user_interface.py" line="1" column="1"/>
   </compounddef>

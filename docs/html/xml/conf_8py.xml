@@ -31,10 +31,10 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal">project<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;rt2_assignment1&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal">copyright<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;2021,<sp/>Anderson&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal">author<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Anderson&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">author<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Anderson<sp/>Siqueira&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>full<sp/>version,<sp/>including<sp/>alpha/beta/rc<sp/>tags</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">release<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;13/07/2021&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">release<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;1.0&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>General<sp/>configuration<sp/>---------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
@@ -43,18 +43,18 @@
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">#<sp/>extensions<sp/>coming<sp/>with<sp/>Sphinx<sp/>(named<sp/>&apos;sphinx.ext.*&apos;)<sp/>or<sp/>your<sp/>custom</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ones.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal">extensions<sp/>=<sp/>[</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.autodoc&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.doctest&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.intersphinx&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.todo&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.coverage&apos;</highlight><highlight class="normal">,<sp/><sp/></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.mathjax&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.ifconfig&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.viewcode&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.githubpages&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;sphinx.ext.napoleon&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.inheritance_diagram&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;breathe&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.autodoc&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.doctest&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.intersphinx&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.todo&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.coverage&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.mathjax&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.ifconfig&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.viewcode&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.githubpages&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;sphinx.ext.napoleon&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sphinx.ext.inheritance_diagram&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;breathe&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal">]</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Add<sp/>any<sp/>paths<sp/>that<sp/>contain<sp/>templates<sp/>here,<sp/>relative<sp/>to<sp/>this<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
@@ -90,13 +90,14 @@
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--Options<sp/>for<sp/>todo<sp/>extension<sp/>----------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#<sp/>If<sp/>true,<sp/>`todo`<sp/>and<sp/>`todoList`<sp/>produce<sp/>output,<sp/>else<sp/>they<sp/>produce<sp/>nothing.todo_include_todos<sp/>=<sp/>True</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--Options<sp/>for<sp/>breathe</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal">breathe_projects<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;rt2_assignment1&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&quot;_build/xml/&quot;</highlight><highlight class="normal">}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">breathe_default_project<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;rt2_assignment1&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal">breathe_default_members<sp/>=<sp/>(</highlight><highlight class="stringliteral">&apos;members&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;undoc-members&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#<sp/>If<sp/>true,<sp/>`todo`<sp/>and<sp/>`todoList`<sp/>produce<sp/>output,<sp/>else<sp/>they<sp/>produce<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">todo_include_todos<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--Options<sp/>for<sp/>breathe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">breathe_projects<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;rt2_assignment1&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&quot;_build/xml/&quot;</highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">breathe_default_project<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;rt2_assignment1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">breathe_default_members<sp/>=<sp/>(</highlight><highlight class="stringliteral">&apos;members&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;undoc-members&apos;</highlight><highlight class="normal">)</highlight></codeline>
     </programlisting>
     <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/conf.py"/>
   </compounddef>

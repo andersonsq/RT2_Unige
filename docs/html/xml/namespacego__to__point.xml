@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="36" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="36" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="38" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1ae444f19eb2019982432760ace036ce03" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="41" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="41" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="43" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1aa2d0ef255bcf5d5faf9ca2764730fb17" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="43" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="43" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="45" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a57b4090d0abcbcf0bfa2bcb9329d3036" prot="public" static="no" mutable="no">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="44" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="44" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="46" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a64583fad586a7212c40613ec1c3e7c69" prot="public" static="no" mutable="no">
         <type></type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="47" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="47" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="49" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a354fba5ca969f353a94d6131040611b9" prot="public" static="no" mutable="no">
         <type></type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="51" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="51" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="53" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a67f95834f0959feb3facd17bc7fa2b38" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="54" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="54" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="56" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1af74ccf49164d0478ca8343e2031d5813" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="55" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="55" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="57" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="56" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="56" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="58" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a524106fc7667a0927951dfd89d52d6a7" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="57" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="57" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="59" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a7bc498652ca66932e704e738b50c297b" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="58" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="58" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="60" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1acb4e14986fafe5cb73bb8ad0c178869d" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="59" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="59" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="61" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1afecad4058844db05d8321199e25b4498" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="60" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="60" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="62" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacego__to__point_1a16c473b9e717200c483d18e66b48152a" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="61" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="61" bodyend="-1"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="63" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="63" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -213,10 +213,17 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Arguments: Velocity message (req)
+
+/vel server
+      
+Description:
+Receives from Velocity.srv the maximun values for angular and linear velocities
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="64" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="64" bodyend="75"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="66" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="66" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1a36304a9f313b0579f7fc69fa01695524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -231,16 +238,16 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Odometry callback
-
 Arguments: Odometry message (msg)
-
+      
 Description:
 Receives from Odometry message the values of X, Y and theta
-</verbatim> </para>
+</verbatim> <linebreak/>
+ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="76" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="76" bodyend="101"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="86" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="86" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1a31ee48e5cae36821049b572a96b7c8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -255,14 +262,14 @@ Receives from Odometry message the values of X, Y and theta
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Arguments: state (int)
-
+          
 Description:
 Update the global state
 </verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="102" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="102" bodyend="114"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="111" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="111" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1ac688bb56fa84763ea2edefc30cae032a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -277,15 +284,15 @@ Update the global state
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Arguments: float (angle) -&gt; input
-           float (angle) -&gt; return      
-
+float (angle) -&gt; return
+                 
 Description:
 Normalize the angle between pi and -pi
 </verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="115" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="115" bodyend="127"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="124" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="124" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1a9c3011a3065fcbefcc1c5ad8c9979669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -300,16 +307,16 @@ Normalize the angle between pi and -pi
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Arguments: float (des_yaw)
-           int (next_state)
-      
-Description: 
-Orient the robot in direction of goal position (x,y) or achieve it.
-It can also change to a new state depending of the actual orientation.  
+int (next_state)
+                 
+Description:
+Orient the robot in direction of goal position (x,y) or achieve it. 
+It can also change to a new state depending of the actual orientation. 
 </verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="128" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="128" bodyend="154"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="137" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="137" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1ac8579665c0fbf665f734476554fac37d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -324,15 +331,15 @@ It can also change to a new state depending of the actual orientation.
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Arguments: point (des_pos)
-           position (desired_) for x, y
+position (desired_) for x, y
 
-Description:           
+Description:
 Set both angular and linear speed depending on the distance between the robot the goal
 </verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="155" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="155" bodyend="187"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="164" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="164" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1a4a406386ca62830c19c93949e923f7bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -349,7 +356,7 @@ Set both angular and linear speed depending on the distance between the robot th
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="188" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="188" bodyend="203"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="197" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="197" bodyend="212"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1ac2587220a4ac9c845bc9c5b0b45d5835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -361,11 +368,12 @@ Set both angular and linear speed depending on the distance between the robot th
         <detaileddescription>
 <para><verbatim>Description:
 Stop the robot setting both angular and linear velocity to 0
-</verbatim> </para>
+</verbatim> <linebreak/>
+ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="204" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="204" bodyend="214"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="213" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="213" bodyend="223"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1a2203d17b7e563bee20ed4c988548df45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -384,11 +392,12 @@ Stop the robot setting both angular and linear velocity to 0
 Description:
 Set an action deppending on the robot actual state. 
 Direct communication with the state machine code, it will run in a loop until the user cancel/preempt the action
-</verbatim> </para>
+</verbatim> <linebreak/>
+ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="215" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="215" bodyend="275"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="224" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="224" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point_1ab92bd6db1ec323a4d795ed6cb40aebe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -401,26 +410,28 @@ Direct communication with the state machine code, it will run in a loop until th
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="276" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="276" bodyend="289"/>
+        <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="285" column="1" bodyfile="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" bodystart="285" bodyend="298"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><verbatim>.. module:: go_to_point
-      :platform: Unix
-      :synopsis: Python module for piloting the robot to the target
-      
-      .. moduleauthor:: Anderson Siqueira
-      
-      ROS node for driving a robot to a specific point
-      
-      Subscribes to: 
-         /odom topic where the simulator publishes the robot position
-      Publishes to: 
-         /cmd_vel the desired robot position
-      Service : 
-         /go_to_point to start the robot motion.</verbatim> </para>
+    :platform: Unix
+    :synopsis: Python module for piloting the robot to the target
+    
+.. moduleauthor:: Anderson Siqueira
+    
+    ROS node for driving a robot to a specific point
+    
+Subscribes to: 
+    /odom (topic where the simulator publishes the robot position)
+Publishes to: 
+    /cmd_vel (the desired robot position)
+Service : 
+    /go_to_point (to start the robot motion)
+    /vel (requested by our jupyter notebook)
+</verbatim> </para>
     </detaileddescription>
     <location file="/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/go_to_point.py" line="1" column="1"/>
   </compounddef>

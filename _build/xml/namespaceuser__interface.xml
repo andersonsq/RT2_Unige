@@ -20,22 +20,21 @@ advertised by :mod:`go_to_point`.
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/user_interface.py" line="20" column="1" bodyfile="scripts/user_interface.py" bodystart="20" bodyend="43"/>
+        <location file="scripts/user_interface.py" line="19" column="1" bodyfile="scripts/user_interface.py" bodystart="19" bodyend="42"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><verbatim>.. module:: user_interface
-:platform: Unix:
-synopsis: Python module for the user Interface
-
-.. author:: Anderson Siqueira 
-  
+   :platform: Unix
+   :synopsis: Python module for the user Interface    
+.. moduleauthor:: Anderson Siqueira 
+    
 This node implements an user interface
   
 Service:
-  /user_interface    
+   /user_interface    
 </verbatim> </para>
     </detaileddescription>
     <location file="scripts/user_interface.py" line="1" column="1"/>

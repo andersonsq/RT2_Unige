@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user_5finterface_36',['user_interface',['../namespaceuser__interface.html',1,'']]]
+  ['go_5fto_5fpoint_62',['go_to_point',['../namespacego__to__point.html',1,'']]]
 ];
