@@ -4,7 +4,7 @@
 .. module:: go_to_point
     :platform: Unix
     :synopsis: Python module for piloting the robot to the target
-.. moduleauthor:: Anderson Siqueira
+.. module author:: Anderson Siqueira
     
     ROS node for driving a robot to a specific point
     
@@ -163,7 +163,7 @@ def fix_yaw(des_pos):
 def go_straight_ahead(des_pos):
     """
     Arguments: point (des_pos)
-    position (desired_) for x, y
+    desired position for x, y
     
     Description:
     Set both angular and linear speed depending on the distance between the robot the goal

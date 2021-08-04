@@ -14,7 +14,7 @@
 <codeline lineno="4"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>..<sp/>module::<sp/>user_interface</highlight></codeline>
 <codeline lineno="5"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:platform:<sp/>Unix</highlight></codeline>
 <codeline lineno="6"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:synopsis:<sp/>Python<sp/>module<sp/>for<sp/>the<sp/>user<sp/>Interface<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="7"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>..<sp/>moduleauthor::<sp/>Anderson<sp/>Siqueira<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>..<sp/>module<sp/>author::<sp/>Anderson<sp/>Siqueira<sp/></highlight></codeline>
 <codeline lineno="8"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="9"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>This<sp/>node<sp/>implements<sp/>an<sp/>user<sp/>interface</highlight></codeline>
 <codeline lineno="10"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>

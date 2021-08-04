@@ -14,7 +14,7 @@
 <codeline lineno="4"><highlight class="stringliteral">..<sp/>module::<sp/>go_to_point</highlight></codeline>
 <codeline lineno="5"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:platform:<sp/>Unix</highlight></codeline>
 <codeline lineno="6"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:synopsis:<sp/>Python<sp/>module<sp/>for<sp/>piloting<sp/>the<sp/>robot<sp/>to<sp/>the<sp/>target</highlight></codeline>
-<codeline lineno="7"><highlight class="stringliteral">..<sp/>moduleauthor::<sp/>Anderson<sp/>Siqueira</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral">..<sp/>module<sp/>author::<sp/>Anderson<sp/>Siqueira</highlight></codeline>
 <codeline lineno="8"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="9"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>ROS<sp/>node<sp/>for<sp/>driving<sp/>a<sp/>robot<sp/>to<sp/>a<sp/>specific<sp/>point</highlight></codeline>
 <codeline lineno="10"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -173,7 +173,7 @@
 <codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacego__to__point_1ac8579665c0fbf665f734476554fac37d" kindref="member">go_straight_ahead</ref>(des_pos):</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
 <codeline lineno="165"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Arguments:<sp/>point<sp/>(des_pos)</highlight></codeline>
-<codeline lineno="166"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>position<sp/>(desired_)<sp/>for<sp/>x,<sp/>y</highlight></codeline>
+<codeline lineno="166"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>desired<sp/>position<sp/>for<sp/>x,<sp/>y</highlight></codeline>
 <codeline lineno="167"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="168"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Description:</highlight></codeline>
 <codeline lineno="169"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Set<sp/>both<sp/>angular<sp/>and<sp/>linear<sp/>speed<sp/>depending<sp/>on<sp/>the<sp/>distance<sp/>between<sp/>the<sp/>robot<sp/>the<sp/>goal</highlight></codeline>

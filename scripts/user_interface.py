@@ -4,7 +4,7 @@
     .. module:: user_interface
        :platform: Unix
        :synopsis: Python module for the user Interface    
-    .. moduleauthor:: Anderson Siqueira 
+    .. module author:: Anderson Siqueira 
         
     This node implements an user interface
   
