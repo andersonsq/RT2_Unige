@@ -87,7 +87,7 @@
   &apos;sphinx.ext.ifconfig&apos;,
   &apos;sphinx.ext.viewcode&apos;,
   &apos;sphinx.ext.githubpages&apos;,
-  &quot;sphinx.ext.napoleon&quot;,
+  &apos;sphinx.ext.napoleon&apos;,
   &apos;sphinx.ext.inheritance_diagram&apos;,
   &apos;breathe&apos;
 ]</initializer>
