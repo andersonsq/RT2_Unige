@@ -18,6 +18,7 @@ To properly oberserve and run correctly the behaviour of the mobile robot in you
 - ROS2 Foxy
 - Python3
 - Gazebo 
+- Jupyter Notebook
 
 ## General info
 
@@ -37,7 +38,7 @@ The launch file will open and start:
 
 Because our user request is implemented as an action, it can be preempted, this way we can stop the robot at any time during the simulation and then restart it with a new goal.
 
-![](docs/rosgraph.png)
+![](docs/rosgraph_jupyter.png)
 
 ## Codes e nodes
 
@@ -81,7 +82,6 @@ roslaunch rt2_assignment1 Robotnik_coppelia_scene.launch
 ## Futher information
 
 To have acess to the documentation of this project, you need to go to:
-- folder `docs`
+- folder `_build`
 - folder `html`
-- double click on the file `files.html`
- 
+- double click on the file `index.html`
